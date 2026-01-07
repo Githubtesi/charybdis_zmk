@@ -6,4 +6,5 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # @main をやめて、安定版のタグである @v0.3 に固定します
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
