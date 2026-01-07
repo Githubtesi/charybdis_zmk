@@ -29,3 +29,10 @@
     device = <&trackball>;
   };
 };
+
+/* 左手側（センサーがない側）に仮想のトラックボール定義を追加します */
+/ {
+    vtrackball: vtrackball {
+        compatible = "zmk,virtual-input";
+    };
+};
