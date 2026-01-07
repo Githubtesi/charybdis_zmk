@@ -42,3 +42,6 @@
     device = <&trackball>;
   };
 };
+
+/* 右手側では物理センサーを vtrackball という名前でも呼べるようにします */
+vtrackball: &trackball { };
