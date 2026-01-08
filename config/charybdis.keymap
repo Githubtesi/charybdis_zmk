@@ -89,11 +89,11 @@
         to-WIN {
             bindings = <&to 0>;
             key-positions = <50 51>;
-            layers = <3 6 11>;
+            layers = <4 6 11>;
         };
 
         to-MAC {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <50 51>;
             layers = <0 6 11>;
         };
@@ -101,13 +101,13 @@
         to-GAME {
             bindings = <&to 6>;
             key-positions = <47 36>;
-            layers = <0 3 11>;
+            layers = <0 4 11>;
         };
 
         to-FN {
             bindings = <&to 11>;
             key-positions = <41 42>;
-            layers = <0 3 6>;
+            layers = <0 4 6>;
         };
 
         caps_word {
@@ -184,12 +184,12 @@
 
         default_win_layer {
             bindings = <
-&kp ESCAPE      &kp N1               &kp N2           &kp N3           &kp N4             &kp N5            &kp N6       &kp N7              &kp N8            &kp N9            &kp N0                &kp DE_SQT
-&kp TAB         &kp Q                &kp L            &kp U            &kp COMMA          &kp DOT           &kp F        &kp W               &kp R             &kp Y             &kp P                 &kp DE_U_UMLAUT
-&kp LEFT_SHIFT  &hml LEFT_CONTROL E  &hml LEFT_ALT I  &hml LEFT_GUI A  &hml LEFT_SHIFT O  &kp MINUS         &kp K        &hmr RIGHT_SHIFT T  &hmr RIGHT_GUI N  &hmr RIGHT_ALT S  &hmr RIGHT_CONTROL H  &kp DE_A_UMLAUT
-&kp LCTRL       &lt 9 Z              &kp X            &kp C            &kp V              &kp SEMI          &kp G        &kp D               &kp M             &kp J             &lt 9 B               &kp RSHIFT
-                                                      &lt 1 TAB        &kp SPACE          &lt 2 LEFT_GUI    &lt 1 ENTER  &kp BACKSPACE
-                                                                       &mkp RCLK          &mkp LCLK         &mo 2
+&none  &kp N1               &kp N2           &kp N3           &kp N4             &kp N5       &kp N6  &kp N7              &kp N8            &kp N9            &kp N0                &kp DE_SQT
+&none  &kp Q                &kp L            &kp U            &kp COMMA          &kp DOT      &kp F   &kp W               &kp R             &kp Y             &kp P                 &none
+&none  &hml LEFT_CONTROL E  &hml LEFT_ALT I  &hml LEFT_GUI A  &hml LEFT_SHIFT O  &kp MINUS    &kp K   &hmr RIGHT_SHIFT T  &hmr RIGHT_GUI N  &hmr RIGHT_ALT S  &hmr RIGHT_CONTROL H  &none
+&none  &lt 9 Z              &kp X            &kp C            &kp V              &kp SEMI     &kp G   &kp D               &kp M             &kp J             &lt 9 B               &none
+                                             &none            &none              &none        &none   &mo 1
+                                                              &mkp RCLK          &mkp LCLK    &none
             >;
 
             label = "QUERTZ";
@@ -197,12 +197,12 @@
 
         win_raise_layer {
             bindings = <
-&trans                        &trans                &trans                      &trans                              &trans                                &trans            &trans               &trans                  &trans                          &trans                           &trans                         &trans
-&kp DE_SECTION                &kp DE_EXCLAMATION    &kp DE_DOUBLE_QUOTES        &hml DE_HASH DE_ASTERISK            &hml DE_CENT DE_C_CEDILLA             &kp DE_PERCENT    &hmr DE_NOT DE_AMPS  &hmr DE_SLASH DE_N7     &hmr DE_LEFT_PARENTHESIS DE_N8  &hmr DE_RIGHT_PARENTHESIS DE_N9  &hmr DE_ACUTE DE_SINGLE_QUOTE  &hmr DE_GRAVE DE_QUESTION
-&hml DE_POUND_SIGN DE_DOLLAR  &hml LEFT_CONTROL N1  &hml LEFT_ALT DE_LESS_THAN  &hml LEFT_GUI DE_EQUAL              &hml LEFT_SHIFT DE_GREATER_THAN       &kp DE_TILDE      &kp DE_PLUS          &hmr RIGHT_SHIFT DE_N4  &hmr RIGHT_GUI DE_N5            &hmr RIGHT_ALT DE_N6             &hmr RIGHT_CONTROL ENTER       &hmr DE_BROKEN_BAR DE_PIPE
-&kp DE_CARET                  &trans                &kp DE_AT                   &hml DE_LEFT_BRACKET DE_LEFT_BRACE  &hml DE_RIGHT_BRACKET DE_RIGHT_BRACE  &kp DE_UMLAUT     &kp DE_MINUS         &kp DE_N1               &kp DE_N2                       &kp DE_N3                        &kp DE_PERIOD                  &kp DE_BACKSLASH
-                                                                                &trans                              &kp BACKSPACE                         &trans            &trans               &kp DE_N0
-                                                                                                                    &trans                                &trans            &trans
+&trans  &trans  &trans  &trans  &trans         &trans       &trans  &trans          &trans          &trans           &trans  &trans
+&none   &none   &none   &none   &none          &none        &none   &none           &kp UP          &none            &none   &none
+&none   &none   &none   &none   &kp BACKSPACE  &kp ENTER    &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
+&none   &none   &none   &none   &none          &none        &none   &none           &none           &none            &none   &none
+                        &trans  &none          &trans       &trans  &none
+                                &trans         &trans       &trans
             >;
 
             label = "NUMBERS";
