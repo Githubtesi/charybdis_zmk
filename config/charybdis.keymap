@@ -184,12 +184,12 @@
 
         default_win_layer {
             bindings = <
-&none  &kp N1               &kp N2           &kp N3           &kp N4             &kp N5       &kp N6  &kp N7              &kp N8            &kp N9            &kp N0                &kp DE_SQT
-&none  &kp Q                &kp L            &kp U            &kp COMMA          &kp DOT      &kp F   &kp W               &kp R             &kp Y             &kp P                 &none
-&none  &hml LEFT_CONTROL E  &hml LEFT_ALT I  &hml LEFT_GUI A  &hml LEFT_SHIFT O  &kp MINUS    &kp K   &hmr RIGHT_SHIFT T  &hmr RIGHT_GUI N  &hmr RIGHT_ALT S  &hmr RIGHT_CONTROL H  &none
-&none  &lt 9 Z              &kp X            &kp C            &kp V              &kp SEMI     &kp G   &kp D               &kp M             &kp J             &lt 9 B               &none
-                                             &none            &none              &none        &none   &mo 1
-                                                              &mkp RCLK          &mkp LCLK    &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5       &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DE_SQT
+&none  &kp Q   &kp L   &kp U   &kp COMMA  &kp DOT      &kp F   &kp W   &kp R   &kp Y   &kp P   &none
+&none  &kp E   &kp I   &kp A   &kp O      &kp MINUS    &kp K   &kp T   &kp N   &kp S   &kp H   &none
+&none  &kp Z   &kp X   &kp C   &kp V      &kp SEMI     &kp G   &kp D   &kp M   &kp J   &kp B   &none
+                       &none   &none      &none        &none   &mo 1
+                               &mkp LCLK  &mkp RCLK    &none
             >;
 
             label = "QUERTZ";
@@ -197,12 +197,12 @@
 
         win_raise_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans         &trans       &trans  &trans          &trans          &trans           &trans  &trans
-&none   &none   &none   &none   &none          &none        &none   &none           &kp UP          &none            &none   &none
-&none   &none   &none   &none   &kp BACKSPACE  &kp ENTER    &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
-&none   &none   &none   &none   &none          &none        &none   &none           &none           &none            &none   &none
-                        &trans  &none          &trans       &trans  &none
-                                &trans         &trans       &trans
+&trans  &trans  &trans  &trans         &trans     &trans    &trans  &trans          &trans          &trans           &trans  &trans
+&none   &none   &none   &none          &none      &none     &none   &none           &kp UP          &none            &none   &none
+&none   &none   &none   &kp BACKSPACE  &kp ENTER  &none     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
+&none   &none   &none   &none          &none      &none     &none   &none           &none           &none            &none   &none
+                        &trans         &none      &trans    &trans  &none
+                                       &trans     &trans    &trans
             >;
 
             label = "NUMBERS";
