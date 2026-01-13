@@ -13,19 +13,16 @@
 // };
 
 / {
-    /* input config for mouse move mode */
-
+/* input config for mouse move mode */
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        //layers = <0 3 6>; //指定レイヤーのみトラックボールが使えるようになる
+        /* layers を書かないことで、他の特殊レイヤー（9, 10）以外の全レイヤーで動作します */
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <2>;
-
-        // bindings = <&ib_toggle_layer 7>;
+        scale-divisor = <2>; // ここの数字を大きくすると遅く、小さくすると速くなります
     };
 
     /* input config for snipe mode */
