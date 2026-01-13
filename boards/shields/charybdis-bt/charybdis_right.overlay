@@ -42,7 +42,7 @@
   zip_xy_scaler: zip_xy_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
-    type = "relative";
+    type = <0x02>; // "relative" から <0x02> に変更（EV_REL を意味します）
   };
   /* --------------- */
 
@@ -63,5 +63,6 @@
 
 /* 右手側では物理センサーを vtrackball という名前でも呼べるようにします */
 vtrackball: &trackball { };
+
 
 
