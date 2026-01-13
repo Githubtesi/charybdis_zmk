@@ -1,14 +1,12 @@
 #include "charybdis.dtsi"
 #include "charybdis_pmw3610.dtsi"
 
-// The matrix transform is 6 columns over because the left half is 6 columns wide.
 &default_transform {
 	col-offset = <6>;
 };
 
 &kscan0 {
 	compatible = "zmk,kscan-gpio-matrix";
-	
 	col-gpios
 		= <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -17,7 +15,6 @@
 		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
-
 	row-gpios
                 = <&pro_micro 21  GPIO_ACTIVE_HIGH>
                 , <&pro_micro 18  GPIO_ACTIVE_HIGH>
@@ -35,26 +32,15 @@
     status = "okay";
 };
 
-// https://github.com/badjeff/zmk-pmw3610-driver
-/ {
+/* .keymap ファイルからセンサーを制御するための重要なラベル定義 */
+vtrackball: &trackball { };
 
-  /* スケーラーの定義  */
+/ {
+  /* スケーラー（一応定義しておきますが、速度調整は keymap 側で行います） */
   zip_xy_scaler: zip_xy_scaler {
     compatible = "zmk,input-processor-scaler";
     #input-processor-cells = <2>;
-    type = <0x02>; // "relative" から <0x02> に変更（EV_REL を意味します）
-	/* codes 0x00 0x01 = REL_X および REL_Y (横と縦の軸) */
+    type = <0x02>; 
 	codes = <0x00 0x01>;
   };
 };
-
-/* 右手側では物理センサーを vtrackball という名前でも呼べるようにします */
-vtrackball: &trackball { };
-
-
-
-
-
-
-
-
