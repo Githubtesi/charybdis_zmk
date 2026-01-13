@@ -152,6 +152,15 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <24 25>;
         };
+
+        zenkaku-hankaku {
+            bindings = <&kp LANG5>;
+            key-positions = <13 14>;
+            timeout-ms = <150>;
+            slow-release;
+            require-prior-idle-ms = <280>;
+            layers = <0>;
+        };
     };
 
     behaviors {
