@@ -71,6 +71,7 @@
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
             layers = <0>;
+            slow-release;
         };
     };
 
