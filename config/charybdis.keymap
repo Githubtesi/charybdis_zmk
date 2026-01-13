@@ -5,15 +5,16 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-/* 追加：マウス移動の定数を定義するために必要 */
-#include <dt-bindings/zmk/input.h>
+
+/* 不要な #include <dt-bindings/zmk/input.h> は削除しました */
 
 / {
-    /* 通常のマウス移動設定：全レイヤー(0,1,2,3)で有効化 */
+    /* 通常のマウス移動設定：全レイヤーで有効化 */
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        /* 重要：動作させたい全レイヤー番号をここに列挙します */
+        status = "okay";
+        /* 重要：Base(0), Edit(1), Mouse(2), Mouse_slow(3) の全てで動くようにします */
         layers = <0 1 2 3>; 
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -22,12 +23,11 @@
         scale-divisor = <2>; 
     };
 
-    /* スナイプ（低速）モードの設定：レイヤー3を割り当てたい場合はここを変更 */
-    /* 現在のキーマップ構成に合わせて必要なら layers = <3>; にしてください */
+    /* スナイプ（低速）モードの設定 */
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <10>; // 現在のキーマップには10番がないため実質無効
+        layers = <10>; 
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -39,7 +39,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <9>; // 現在のキーマップには9番がないため実質無効
+        layers = <9>; 
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -62,15 +62,11 @@
 
     combos {
         compatible = "zmk,combos";
-        /* コンボの設定（中略：そのまま維持） */
+        /* 各種クリック設定を維持 */
         rh_leftClick { bindings = <&mkp LCLK>; key-positions = <43 44>; };
         rh_rightClick { bindings = <&mkp RCLK>; key-positions = <44 45>; };
         lh_leftClick { bindings = <&mkp LCLK>; key-positions = <40 39>; };
         lh_rightClick { bindings = <&mkp RCLK>; key-positions = <38 39>; };
-    };
-
-    behaviors {
-        /* Hold-Tapの設定（中略：そのまま維持） */
     };
 
     keymap {
