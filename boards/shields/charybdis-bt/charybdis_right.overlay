@@ -32,15 +32,5 @@
     status = "okay";
 };
 
-/* .keymap ファイルからセンサーを制御するための重要なラベル定義 */
+/* .keymap 側の &vtrackball とセンサー本体を紐付けます */
 vtrackball: &trackball { };
-
-/ {
-  /* スケーラー（一応定義しておきますが、速度調整は keymap 側で行います） */
-  zip_xy_scaler: zip_xy_scaler {
-    compatible = "zmk,input-processor-scaler";
-    #input-processor-cells = <2>;
-    type = <0x02>; 
-	codes = <0x00 0x01>;
-  };
-};
