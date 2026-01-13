@@ -1,13 +1,12 @@
 #include "keys_de_swiss.h"
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/input_transform.h> // key ball slow mode
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/input_transform.h> // key ball slow mode
-
 
 // / {
 //     chosen { zmk,matrix_transform = &default_transform; };
@@ -217,7 +216,7 @@
                                                                  &none      &kp SPACE    &none
             >;
 
-            label = "oonisi";
+            label = "大西配列";
         };
 
         edit_made {
@@ -230,11 +229,11 @@
                                         &kp BACKSPACE  &kp ENTER    &trans
             >;
 
-            label = "writing to edit";
+            label = "文字入力確定";
         };
 
         mouse {
-            label = "windows";
+            label = "マウス高速";
             bindings = <
 &none  &none  &none  &none  &none  &none    &none  &none      &none      &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none      &none      &none  &none  &none
@@ -246,7 +245,7 @@
         };
 
         mouse_slow {
-            label = "mouse_seimitsu";
+            label = "マウス低速";
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans  &trans
 &none   &none   &none   &none      &none      &none     &none   &none      &none      &none   &none   &none
