@@ -37,6 +37,16 @@
 
 // https://github.com/badjeff/zmk-pmw3610-driver
 / {
+
+  /* スケーラーの定義  */
+  zip_xy_scaler: zip_xy_scaler {
+    compatible = "zmk,input-processor-scaler";
+    #input-processor-cells = <2>;
+    type = "relative";
+  };
+  /* --------------- */
+
+
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
@@ -53,4 +63,5 @@
 
 /* 右手側では物理センサーを vtrackball という名前でも呼べるようにします */
 vtrackball: &trackball { };
+
 
