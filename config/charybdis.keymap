@@ -121,12 +121,12 @@
         base {
             label = "大西配列";
             bindings = <
-&none  &kp N1                    &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6  &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
-&none  &ctrl_shlft TAB Q         &kp L                   &kp U   &kp COMMA  &kp DOT      &kp F   &kp W   &kp R   &kp Y                    &kp P                      &none
-&none  &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O      &kp MINUS    &kp K   &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &none
-&none  &ctrl_shlft LCTRL Z       &ctrl_shlft LEFT_ALT X  &kp C   &kp V      &kp SEMI     &kp G   &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
-                                                         &none   &none      &none        &to 2   &mo 1
-                                                                 &none      &kp SPACE    &none
+&none  &kp N1                    &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
+&none  &ctrl_shlft TAB Q         &kp L                   &kp U   &kp COMMA  &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
+&none  &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O      &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &none
+&none  &ctrl_shlft LCTRL Z       &ctrl_shlft LEFT_ALT X  &kp C   &kp V      &kp SEMI     &kp G      &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
+                                                         &none   &none      &none        &to 2      &mo 1
+                                                                 &none      &kp SPACE    &mkp LCLK
             >;
         };
 
