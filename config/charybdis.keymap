@@ -14,7 +14,7 @@
 
         /* 根拠: 0,1,2の全レイヤーでマウス移動を許可する */
 
-        layers = <0 1 2>;
+        layers = <0 1 2 3>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -29,9 +29,9 @@
         device = <&vtrackball>;
         status = "okay";
 
-        /* 根拠: レイヤー3（mouse_slow）の時だけこの設定を適用する */
+        /* 下記レイヤーの時だけこの設定を適用する */
 
-        layers = <2>;
+        layers = <2 3>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
