@@ -19,11 +19,11 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <2>;
+        scale-divisor = <4>;
     };
 
     /* --- レイヤー3専用：低速設定（DPI変更） --- */
-
+    /* ----------------------------
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -41,7 +41,7 @@
 
         scale-divisor = <16>; // 2から8に変えることで、通常より4倍遅くなります
     };
-
+    --------- */
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
