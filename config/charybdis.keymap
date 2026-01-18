@@ -148,7 +148,7 @@
         base {
             label = "大西配列";
             bindings = <
-&none           &kp N1                  &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
+&kp ESCAPE      &kp N1                  &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
 &kp TAB         &kp Q                   &kp L                   &kp U   &kp COMMA  &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
 &kp LEFT_SHIFT  &kp E                   &kp I                   &kp A   &kp O      &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &kp RIGHT_SHIFT
 &kp LCTRL       &ctrl_shlft LEFT_ALT Z  &ctrl_shlft LEFT_WIN X  &kp C   &kp V      &kp SEMI     &kp G      &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
@@ -172,23 +172,23 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&to 0           &none      &none      &none      &none          &none        &none     &none      &none           &none            &none       &none
-&none           &none      &none      &none      &none          &none        &none     &none      &kp UP_ARROW    &none            &kp DELETE  &none
-&kp LEFT_SHIFT  &kp LC(A)  &none      &none      &none          &none        &none     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&kp LCTRL       &kp LC(Z)  &kp RC(X)  &kp LC(C)  &kp LG(V)      &none        &none     &mkp LCLK  &mkp MCLK       &mkp RCLK        &none       &none
-                                      &none      &mo 3          &none        &to 0     &mkp MB5
-                                                 &kp BACKSPACE  &kp ENTER    &mkp MB4
+&kp ESC         &none      &none      &none      &none                    &none        &none      &none      &none           &none            &none       &none
+&none           &none      &none      &none      &none                    &none        &none      &kp HOME   &kp UP_ARROW    &kp END          &kp DELETE  &none
+&kp LEFT_SHIFT  &kp LC(A)  &none      &none      &none                    &none        &none      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&kp LCTRL       &kp LC(Z)  &kp RC(X)  &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK  &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+                                      &none      &mo 3                    &none        &to 0      &mo 1
+                                                 &kp BACKSPACE            &kp ENTER    &mkp LCLK
             >;
         };
 
         number {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans         &trans       &kp GRAVE      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &kp PLUS
-&trans  &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &kp MINUS
-&trans  &trans  &trans  &trans  &trans         &trans       &kp RS(MINUS)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &kp ASTERISK
-&trans  &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_0  &trans        &kp PERIOD    &kp ENTER  &kp SLASH
-                        &trans  &trans         &to 2        &to 0          &mo 1
-                                &kp BACKSPACE  &kp ENTER    &mkp LCLK
+&kp ESC  &trans  &trans  &trans  &trans         &trans       &kp GRAVE      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &kp PLUS
+&trans   &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &kp MINUS
+&trans   &trans  &trans  &trans  &trans         &trans       &kp RS(MINUS)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &kp ASTERISK
+&trans   &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_0  &trans        &kp PERIOD    &kp ENTER  &kp SLASH
+                         &trans  &trans         &to 2        &to 0          &mo 1
+                                 &kp BACKSPACE  &kp ENTER    &mkp LCLK
             >;
         };
     };
