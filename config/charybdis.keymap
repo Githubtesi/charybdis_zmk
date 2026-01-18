@@ -23,13 +23,13 @@
     };
 
     /* --- レイヤー3専用：低速設定（DPI変更） --- */
-    /* ----------------------------
+    /* ----------
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         status = "okay";
 
-        /* 下記レイヤーの時だけこの設定を適用する */
+        // 下記レイヤーの時だけこの設定を適用する
 
         layers = <2 3>;
         evt-type = <INPUT_EV_REL>;
@@ -37,7 +37,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
 
-        /* 根拠: 分母を大きくすると、マウスはより精密（低速）に動きます */
+        // 根拠: 分母を大きくすると、マウスはより精密（低速）に動きます
 
         scale-divisor = <16>; // 2から8に変えることで、通常より4倍遅くなります
     };
