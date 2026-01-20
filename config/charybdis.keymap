@@ -71,12 +71,12 @@
             key-positions = <14 13>;
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
-            layers = <0 3>;
+            layers = <0 3 2>;
             slow-release;
         };
 
         under_bar {
-            bindings = <&kp RS(NON_US_BACKSLASH)>;
+            bindings = <&kp UNDERSCORE>;
             key-positions = <46 47>;
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
@@ -87,15 +87,6 @@
         search_commamd {
             bindings = <&kp LC(F)>;
             key-positions = <28 37>;
-            timeout-ms = <60>;
-            require-prior-idle-ms = <100>;
-            slow-release;
-            layers = <0>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
             slow-release;
@@ -170,12 +161,12 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&to 0  &trans     &trans          &trans     &trans                       &trans       &trans  &trans          &trans          &trans           &trans   &trans
-&none  &none      &kp W           &none      &kp R                        &none        &none   &kp HOME        &kp UP          &kp END          &kp DEL  &none
-&none  &kp LCTRL  &kp LEFT_SHIFT  &none      &ctrl_shlft LC(LS(F)) LC(F)  &none        &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
-&none  &kp LC(Z)  &kp LC(X)       &kp LC(C)  &ctrl_shlft LG(V) LC(V)      &none        &none   &kp PAGE_DOWN   &kp PG_UP       &none            &none    &none
-                                  &trans     &none                        &trans       &trans  &none
-                                             &kp BACKSPACE                &kp ENTER    &trans
+&none    &trans     &trans          &trans     &trans                       &trans       &trans  &trans          &trans          &trans           &trans   &trans
+&kp TAB  &none      &kp W           &none      &kp R                        &none        &none   &kp HOME        &kp UP          &kp END          &kp DEL  &none
+&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &ctrl_shlft LC(LS(F)) LC(F)  &none        &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
+&none    &kp LC(Z)  &kp LC(X)       &kp LC(C)  &ctrl_shlft LG(V) LC(V)      &none        &none   &kp PAGE_DOWN   &kp PG_UP       &none            &none    &none
+                                    &trans     &none                        &trans       &trans  &none
+                                               &kp BACKSPACE                &kp ENTER    &trans
             >;
         };
 
