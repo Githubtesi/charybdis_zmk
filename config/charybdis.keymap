@@ -76,7 +76,7 @@
         };
 
         under_bar {
-            bindings = <&kp RS(BACKSLASH)>;
+            bindings = <&kp UNDER>;
             key-positions = <46 47>;
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
@@ -138,7 +138,7 @@
         under_bar: under_bar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&none &kp UNDER &kp EQUAL>;
             label = "UNDER_BAR";
         };
     };
@@ -186,7 +186,7 @@
             bindings = <
 &kp ESC  &none  &none  &none  &none          &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
 &none    &none  &none  &none  &none          &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &none  &none  &none  &none          &none        &kp KP_EQUAL     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &none
+&none    &none  &none  &none  &none          &none        &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &none
 &none    &none  &none  &none  &none          &none        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                        &mo 4  &none          &to 2        &to 0            &mo 1
                               &kp BACKSPACE  &kp ENTER    &mkp LCLK
