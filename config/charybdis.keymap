@@ -161,12 +161,12 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&none    &trans     &trans          &trans     &trans                       &trans       &trans  &trans          &trans          &trans           &trans   &trans
-&kp TAB  &none      &kp W           &none      &kp R                        &none        &none   &kp HOME        &kp UP          &kp END          &kp DEL  &none
-&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &ctrl_shlft LC(LS(F)) LC(F)  &none        &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
-&none    &kp LC(Z)  &kp LC(X)       &kp LC(C)  &ctrl_shlft LG(V) LC(V)      &none        &none   &kp PAGE_DOWN   &kp PG_UP       &none            &none    &none
-                                    &trans     &none                        &trans       &trans  &none
-                                               &kp BACKSPACE                &kp ENTER    &trans
+&none    &none      &none           &none      &none                        &none        &none  &none           &none           &none            &none    &none
+&kp TAB  &none      &kp W           &none      &kp R                        &none        &none  &kp HOME        &kp UP          &kp END          &kp DEL  &none
+&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &ctrl_shlft LC(LS(F)) LC(F)  &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
+&none    &kp LC(Z)  &kp LC(X)       &kp LC(C)  &ctrl_shlft LG(V) LC(V)      &none        &none  &kp PAGE_DOWN   &kp PG_UP       &none            &none    &none
+                                    &none      &none                        &none        &none  &none
+                                               &kp BACKSPACE                &kp ENTER    &none
             >;
         };
 
@@ -184,12 +184,12 @@
 
         number {
             bindings = <
-&kp ESC  &trans  &trans  &trans  &trans         &trans       &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&trans   &trans  &trans  &trans  &trans         &trans       &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans        &none
-&trans   &trans  &trans  &trans  &trans         &trans       &kp KP_EQUAL     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER     &none
-&trans   &trans  &trans  &trans  &trans         &trans       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                         &mo 4   &trans         &to 2        &to 0            &mo 1
-                                 &kp BACKSPACE  &kp ENTER    &mkp LCLK
+&kp ESC  &none  &none  &none  &none          &none        &kp GRAVE           &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
+&none    &none  &none  &none  &none          &none        &none               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &none  &none  &none  &none          &none        &kp KP_EQUAL_AS400  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &none
+&none    &none  &none  &none  &none          &none        &kp KP_NUMBER_0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                       &mo 4  &none          &to 2        &to 0               &mo 1
+                              &kp BACKSPACE  &kp ENTER    &mkp LCLK
             >;
 
             label = "テンキー";
@@ -197,12 +197,12 @@
 
         other_base {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &none   &none     &none   &none
-                                &trans  &trans    &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none
+                            &none  &none    &none
             >;
 
             label = "ベース(アプリ)";
