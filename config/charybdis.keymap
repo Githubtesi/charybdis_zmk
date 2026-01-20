@@ -206,12 +206,12 @@
 
         other_base {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 3   &to 2     &to 0      &mo 1
-                                &trans  &trans    &mkp LCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &none   &none     &none   &none
+                                &trans  &trans    &none
             >;
 
             label = "ベース(アプリ)";
