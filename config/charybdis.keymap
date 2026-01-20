@@ -143,18 +143,27 @@
 
     /* --- キーマップ --- */
 
+    macros {
+        under_bar: under_bar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "UNDER_BAR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             label = "大西配列";
             bindings = <
-&kp ESCAPE      &kp N1                    &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
-&kp TAB         &kp Q                     &kp L                   &kp U   &kp COMMA  &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
-&kp LEFT_SHIFT  &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O      &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &kp RIGHT_SHIFT
-&kp LCTRL       &ctrl_shlft LCTRL Z       &ctrl_shlft LEFT_ALT X  &kp C   &kp V      &kp SEMI     &kp G      &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
-                                                                  &none   &to 3      &to 2        &none      &mo 1
-                                                                          &none      &kp SPACE    &mkp LCLK
+&kp ESCAPE  &kp N1                    &kp N2                  &kp N3  &kp N4     &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
+&kp TAB     &kp Q                     &kp L                   &kp U   &kp COMMA  &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
+&kp LCTRL   &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O      &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &kp RIGHT_SHIFT
+&none       &ctrl_shlft LCTRL Z       &ctrl_shlft LEFT_ALT X  &kp C   &kp V      &kp SEMI     &kp G      &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
+                                                              &mo 4   &to 3      &to 2        &none      &mo 1
+                                                                      &none      &kp SPACE    &mkp LCLK
             >;
         };
 
@@ -173,12 +182,12 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC         &none      &none      &none      &none                    &none        &none      &none      &none           &none            &none       &none
-&none           &none      &none      &none      &none                    &none        &none      &kp HOME   &kp UP_ARROW    &kp END          &kp DELETE  &none
-&kp LEFT_SHIFT  &kp LC(A)  &none      &none      &none                    &none        &none      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&kp LCTRL       &kp LC(Z)  &kp RC(X)  &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK  &mkp MCLK       &mkp RCLK        &mkp MB5    &none
-                                      &none      &mo 3                    &none        &to 0      &mo 1
-                                                 &kp BACKSPACE            &kp ENTER    &mkp LCLK
+&kp ESC  &none      &none           &none      &none                    &none        &none      &none      &none           &none            &none       &none
+&kp TAB  &none      &none           &none      &none                    &none        &none      &kp HOME   &kp UP_ARROW    &kp END          &kp DELETE  &none
+&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &none                    &none        &none      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&none    &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK  &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+                                    &mo 4      &mo 3                    &none        &to 0      &mo 1
+                                               &kp BACKSPACE            &kp ENTER    &mkp LCLK
             >;
         };
 
@@ -188,9 +197,24 @@
 &trans   &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &kp MINUS
 &trans   &trans  &trans  &trans  &trans         &trans       &kp RS(MINUS)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &kp ASTERISK
 &trans   &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_0  &trans        &kp PERIOD    &kp ENTER  &kp SLASH
-                         &trans  &trans         &to 2        &to 0          &mo 1
+                         &mo 4   &trans         &to 2        &to 0          &mo 1
                                  &kp BACKSPACE  &kp ENTER    &mkp LCLK
             >;
+
+            label = "テンキー";
+        };
+
+        other_base {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 3   &to 2     &to 0      &mo 1
+                                &trans  &trans    &mkp LCLK
+            >;
+
+            label = "ベース(アプリ)";
         };
     };
 };
