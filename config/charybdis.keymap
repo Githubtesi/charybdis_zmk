@@ -193,11 +193,11 @@
 
         number {
             bindings = <
-&kp ESC  &trans  &trans  &trans  &trans         &trans       &kp GRAVE      &kp PLUS      &kp MINUS     &kp ASTRK     &kp SLASH  &none
-&trans   &trans  &trans  &trans  &trans         &trans       &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans     &none
-&trans   &trans  &trans  &trans  &trans         &trans       &kp RS(MINUS)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ENTER  &none
-&trans   &trans  &trans  &trans  &trans         &trans       &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT    &none
-                         &mo 4   &trans         &to 2        &to 0          &mo 1
+&kp ESC  &trans  &trans  &trans  &trans         &trans       &kp GRAVE        &kp PLUS         &kp MINUS        &kp ASTRK        &kp SLASH  &none
+&trans   &trans  &trans  &trans  &trans         &trans       &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &none
+&trans   &trans  &trans  &trans  &trans         &trans       &kp RS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER  &none
+&trans   &trans  &trans  &trans  &trans         &trans       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT    &none
+                         &mo 4   &trans         &to 2        &to 0            &mo 1
                                  &kp BACKSPACE  &kp ENTER    &mkp LCLK
             >;
 
