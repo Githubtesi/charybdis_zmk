@@ -161,10 +161,10 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC  &none      &none           &none      &none                    &none        &none      &none        &none           &none            &none       &none
-&kp TAB  &none      &none           &none      &none                    &none        &none      &kp PAGE_UP  &kp UP_ARROW    &kp END          &kp DELETE  &none
-&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &none                    &none        &none      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&none    &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK    &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+&kp ESC  &none      &none           &none      &none                    &none        &none      &none          &none           &none            &none       &none
+&kp TAB  &none      &none           &none      &none                    &none        &none      &kp PAGE_DOWN  &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
+&none    &kp LCTRL  &kp LEFT_SHIFT  &none      &none                    &none        &none      &kp LEFT       &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&none    &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK      &mkp MCLK       &mkp RCLK        &mkp MB5    &none
                                     &mo 3      &to 2                    &none        &to 0      &mo 4
                                                &kp BACKSPACE            &kp ENTER    &mkp LCLK
             >;
