@@ -161,7 +161,7 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC  &none      &none           &none      &none                    &none        &none      &none          &none           &none            &none       &none
+&kp ESC  &none      &kp F2          &none      &none                    &none        &none      &none          &none           &none            &none       &none
 &kp TAB  &none      &none           &none      &none                    &none        &none      &kp PAGE_DOWN  &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
 &none    &kp LCTRL  &kp LEFT_SHIFT  &none      &none                    &none        &none      &kp LEFT       &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
 &none    &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK      &mkp MCLK       &mkp RCLK        &mkp MB5    &none
@@ -172,12 +172,12 @@
 
         number {
             bindings = <
-&kp ESC  &none                                           &none                                   &none                   &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &ctrl_shlft EXCLAMATION QUESTION                &ctrl_shlft SINGLE_QUOTE DOUBLE_QUOTES  &ctrl_shlft HASH SLASH  &ctrl_shlft AMPERSAND PIPE          &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &ctrl_shlft LEFT_PARENTHESIS RIGHT_PARENTHESIS  &ctrl_shlft LEFT_BRACE RIGHT_BRACE      &none                   &ctrl_shlft LESS_THAN GREATER_THAN  &kp EQUAL    &kp RS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &ctrl_shlft LEFT_BRACKET RIGHT_BRACKET          &ctrl_shlft CARET DOLLAR                &none                   &none                               &none        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                                                                                 &mo 3                   &none                               &to 1        &to 0            &mo 4
-                                                                                                                         &kp BACKSPACE                       &kp SPACE    &mkp LCLK
+&kp ESC  &none                                    &none                         &none                             &none                               &none                            &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &kp DOUBLE_QUOTES
+&none    &ctrl_shlft QUESTION EXCLAMATION         &kp LS(ASTRK)                 &kp ASTRK                         &none                               &ctrl_shlft KP_MINUS KP_EQUAL    &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &ctrl_shlft LS(N0) KP_RIGHT_PARENTHESIS  &ctrl_shlft LEFT_BRACE GRAVE  &ctrl_shlft LEFT_BRACKET AT_SIGN  &ctrl_shlft LESS_THAN GREATER_THAN  &kp CARET                        &kp RS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &kp HASH                                 &kp DOLLAR                    &kp PERCENT                       &kp AMPERSAND                       &kp APOS                         &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                                                                                &mo 3                             &none                               &to 1                            &to 0            &mo 4
+                                                                                                                  &kp BACKSPACE                       &kp SPACE                        &mkp LCLK
             >;
 
             label = "テンキー";
