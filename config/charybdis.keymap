@@ -150,8 +150,8 @@
             label = "大西配列";
             bindings = <
 &kp ESCAPE  &kp N1                    &kp N2                  &kp N3  &kp N4         &kp N5       &kp N6     &kp N7  &kp N8  &kp N9                   &kp N0                     &kp SLASH
-&kp TAB     &kp Q                     &kp L                   &kp U   &kp COMMA      &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
-&kp LCTRL   &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O          &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &kp RIGHT_SHIFT
+&kp TAB     &ctrl_shlft LS(Q) Q       &kp L                   &kp U   &kp COMMA      &kp DOT      &kp F      &kp W   &kp R   &kp Y                    &kp P                      &none
+&none       &ctrl_shlft LEFT_SHIFT E  &kp I                   &kp A   &kp O          &kp MINUS    &kp K      &kp T   &kp N   &kp S                    &ctrl_shlft RIGHT_SHIFT H  &kp RIGHT_SHIFT
 &none       &ctrl_shlft LCTRL Z       &ctrl_shlft LEFT_ALT X  &kp C   &kp V          &kp SEMI     &kp G      &kp D   &kp M   &ctrl_shlft RIGHT_ALT J  &ctrl_shlft RCTRL B        &none
                                                               &mo 3   &to 2          &to 1        &none      &mo 4
                                                                       &kp BACKSPACE  &kp SPACE    &mkp LCLK
@@ -172,12 +172,12 @@
 
         number {
             bindings = <
-&kp ESC  &none                                    &none                         &none                             &none                               &none                            &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &kp DOUBLE_QUOTES
-&none    &ctrl_shlft QUESTION EXCLAMATION         &kp LS(ASTRK)                 &kp ASTRK                         &none                               &ctrl_shlft KP_MINUS KP_EQUAL    &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &ctrl_shlft LS(N0) KP_RIGHT_PARENTHESIS  &ctrl_shlft LEFT_BRACE GRAVE  &ctrl_shlft LEFT_BRACKET AT_SIGN  &ctrl_shlft LESS_THAN GREATER_THAN  &kp CARET                        &kp RS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &kp HASH                                 &kp DOLLAR                    &kp PERCENT                       &kp AMPERSAND                       &kp APOS                         &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                                                                &mo 3                             &none                               &to 1                            &to 0            &mo 4
-                                                                                                                  &kp BACKSPACE                       &kp SPACE                        &mkp LCLK
+&kp ESC  &none                                   &none                            &none                                           &none                               &none                          &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &kp DOUBLE_QUOTES
+&none    &ctrl_shlft QUESTION EXCLAMATION        &kp LS(NUMBER_2)                 &kp LS(N7)                                      &none                               &none                          &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &ctrl_shlft LEFT_BRACKET RIGHT_BRACKET  &ctrl_shlft LS(NUMBER_8) LS(N9)  &ctrl_shlft LS(LEFT_BRACKET) LS(RIGHT_BRACKET)  &ctrl_shlft LESS_THAN GREATER_THAN  &ctrl_shlft LS(MINUS) MINUS    &kp RS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &kp HASH                                &kp DOLLAR                       &kp PERCENT                                     &kp LS(NUMBER_6)                    &kp APOS                       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                                                                                  &mo 3                                           &none                               &to 1                          &to 0            &mo 4
+                                                                                                                                  &kp BACKSPACE                       &kp SPACE                      &mkp LCLK
             >;
 
             label = "テンキー";
