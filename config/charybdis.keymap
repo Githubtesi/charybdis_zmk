@@ -185,7 +185,7 @@
 &none    &ctrl_shlft QUESTION EXCLAMATION        &kp DOUBLE_QUOTES                               &kp SINGLE_QUOTE                    &none                               &none        &none                    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
 &none    &ctrl_shlft LEFT_BRACKET RIGHT_BRACKET  &ctrl_shlft LEFT_PARENTHESIS RIGHT_PARENTHESIS  &ctrl_shlft LEFT_BRACE RIGHT_BRACE  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp EQUAL                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
 &none    &kp HASH                                &kp DOLLAR                                      &kp PERCENT                         &kp AMPERSAND                       &kp PIPE     &kp KP_NUMBER_0          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                                                                                 &mo 3                               &none                               &to 1        &to 0                    &mo 4
+                                                                                                 &mo 3                               &none                               &to 1        &to 0                    &mo 0
                                                                                                                                      &kp BACKSPACE                       &kp SPACE    &mkp LCLK
             >;
 
@@ -196,9 +196,9 @@
             bindings = <
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &to 5  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none
+                     &none  &to 2  &to 1    &to 0  &mo 4
                             &none  &none    &none
             >;
 
@@ -215,6 +215,19 @@
                                     &none      &none                        &none        &none  &none
                                                &kp BACKSPACE                &kp ENTER    &none
             >;
+        };
+
+        Excel {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none
+                            &none  &none    &none
+            >;
+
+            label = "エクセルコマンド";
         };
     };
 };
