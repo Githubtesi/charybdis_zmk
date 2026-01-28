@@ -43,14 +43,14 @@ US配列のCharybdisを、JIS認識設定のWindowsで「刻印通り」に使�
 **外部ソフトを使用せず、キーボード単体でUS刻印通りの入力を実現します。**
 
 1. Keymap Editorで通常のUS配列としてキーマップを保存します。
-2. 外部プロジェクト [charybdis-zmk-jp-localizer](https://github.com/あなたのユーザー名/charybdis-zmk-jp-localizer) の `localize_keymap.py` を実行し、本リポジトリの `charybdis.keymap` を変換します。
+2. 外部プロジェクト [charybdis-zmk-jp-localizer](https://github.com/Githubtesi/charybdis-zmk-jp-localizer) の `localize_keymap.py` を実行し、本リポジトリの `charybdis.keymap` を変換します。
 3. 変換後の内容をGitHubへ反映（Push）してください。
 
 ### 方法B：AutoHotkeyによるローカライズ
 **PC側に常駐ソフトを入れ、リアルタイムに入力信号を変換します。**
 
 1. キーボード側は標準のUS配列のままビルドします。
-2. 外部プロジェクト [charybdis-us-to-jis-remap](https://github.com/あなたのユーザー名/charybdis-us-to-jis-remap) のAutoHotkeyスクリプトをWindows上で実行します。
+2. 外部プロジェクト [charybdis-us-to-jis-remap](https://github.com/Githubtesi/charybdis-us-to-jis-remap) のAutoHotkeyスクリプトをWindows上で実行します。
 
 ---
 
