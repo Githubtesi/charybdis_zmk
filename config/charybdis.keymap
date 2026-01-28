@@ -183,7 +183,7 @@
             bindings = <
 &kp ESC  &none                             &none                  &none                  &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
 &none    &ctrl_shlft QUESTION EXCLAMATION  &kp LS(N2)                &kp LS(N7)       &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &ctrl_shlft RBKT BSLH             &ctrl_shlft LS(RBKT) LS(BSLH)  &ctrl_shlft LPAR RPAR  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &ctrl_shlft RBKT BSLH             &ctrl_shlft LS(RBKT) LS(BSLH)  &ctrl_shlft LS(N8) LS(N9)  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
 &none    &kp HASH                          &kp DOLLAR             &kp PERCENT            &kp LS(INT3)                            &kp LBKT       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                                                                   &mo 3                  &none                               &to 1        &to 0            &mo 4
                                                                                          &kp BACKSPACE                       &kp SPACE    &mkp LCLK
