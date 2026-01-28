@@ -1,7 +1,3 @@
-外部プロジェクト（PythonスクリプトおよびAutoHotkey）を別リポジトリで管理している状況に合わせて、`README.md` を修正しました。
-
----
-
 # Charybdis 4x6 Wireless (Trackball) – ZMK Config
 
 このリポジトリは、**Charybdis 4×6（トラックボール付き）Wireless 版**の **ZMK Firmware 用キー設定（keymap）**を管理するためのものです。
