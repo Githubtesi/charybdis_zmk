@@ -145,12 +145,12 @@
 
         number {
             bindings = <
-&kp ESC  &none                             &none                          &none                         &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &ctrl_shlft QUESTION EXCLAMATION  &kp LBKT                       &kp LS(N6)                    &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &ctrl_shlft BSLH BSLH             &ctrl_shlft LS(BSLH) LS(BSLH)  &ctrl_shlft LS(QUOTE) LS(N8)  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &kp HASH                          &kp DOLLAR                     &kp PERCENT                   &kp LS(INT3)                        &kp RBKT     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                                                          &mo 3                         &none                               &to 1        &to 0            &mo 4
-                                                                                                        &kp BACKSPACE                       &kp SPACE    &mkp LCLK
+&kp ESC  &none                                   &none                               &none                                           &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
+&none    &ctrl_shlft QUESTION EXCLAMATION        &kp DOUBLE_QUOTES                   &kp SINGLE_QUOTE                                &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &ctrl_shlft LEFT_BRACKET RIGHT_BRACKET  &ctrl_shlft LEFT_BRACE RIGHT_BRACE  &ctrl_shlft LEFT_PARENTHESIS RIGHT_PARENTHESIS  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &kp HASH                                &kp DOLLAR                          &kp PERCENT                                     &kp PIPE                            &kp RBKT     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                                                                                     &mo 3                                           &none                               &to 1        &to 0            &mo 4
+                                                                                                                                     &kp BACKSPACE                       &kp SPACE    &mkp LCLK
             >;
 
             label = "テンキー";
