@@ -122,12 +122,12 @@
         base {
             label = "大西配列";
             bindings = <
-&kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                          &kp N6     &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
-&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                         &kp F      &kp W   &kp R   &kp Y                      &kp P                &kp LBKT
+&kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                        &kp N6     &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
+&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                       &kp F      &kp W   &kp R   &kp Y                      &kp P                &kp LBKT
 &kp LEFT_ALT  &ctrl_shlft LCTRL E  &ctrl_shlft LEFT_SHIFT I  &kp A   &kp O          &ctrl_shlft LS(INT1) MINUS    &kp K      &kp T   &kp N   &ctrl_shlft RIGHT_SHIFT S  &ctrl_shlft RCTRL H  &kp RIGHT_ALT
-&none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI                        &kp G      &kp D   &kp M   &kp J                      &kp B                &none
-                                                             &mo 3   &to 2          &to 1                           &none      &mo 4
-                                                                     &kp BACKSPACE  &kp SPACE                       &mkp LCLK
+&none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI                      &kp G      &kp D   &kp M   &kp J                      &kp B                &none
+                                                             &mo 3   &to 2          &to 1                         &none      &mo 4
+                                                                     &kp BACKSPACE  &kp SPACE                     &mkp LCLK
             >;
         };
 
@@ -145,12 +145,12 @@
 
         number {
             bindings = <
-&kp ESC  &none                             &none                  &none                  &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &ctrl_shlft QUESTION EXCLAMATION  &kp LS(N2)                &kp LS(N7)       &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&kp ESC  &none                             &none                          &none                      &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
+&none    &ctrl_shlft QUESTION EXCLAMATION  &kp LS(N2)                     &kp LS(N7)                 &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
 &none    &ctrl_shlft RBKT BSLH             &ctrl_shlft LS(RBKT) LS(BSLH)  &ctrl_shlft LS(N8) LS(N9)  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &kp HASH                          &kp DOLLAR             &kp PERCENT            &kp LS(INT3)                            &kp LBKT       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                                                  &mo 3                  &none                               &to 1        &to 0            &mo 4
-                                                                                         &kp BACKSPACE                       &kp SPACE    &mkp LCLK
+&none    &kp HASH                          &kp DOLLAR                     &kp PERCENT                &kp LS(INT3)                        &kp LBKT     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                                                                          &mo 3                      &none                               &to 1        &to 0            &mo 4
+                                                                                                     &kp BACKSPACE                       &kp SPACE    &mkp LCLK
             >;
 
             label = "テンキー";
@@ -162,7 +162,7 @@
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &to 6  &none
 &none  &to 5  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &to 2  &to 1    &to 0  &mo 4
+                     &none  &none  &none    &none  &none
                             &none  &none    &none
             >;
 
@@ -187,7 +187,7 @@
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &to 3  &to 2  &to 1    &to 0  &mo 4
+                     &mo 3  &to 2  &to 1    &to 0  &mo 4
                             &none  &none    &none
             >;
 
@@ -200,7 +200,7 @@
 &none  &none          &kp LC(W)      &kp LC(E)  &ctrl_shlft LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none  &none
 &none  &kp LS(LC(A))  &kp LC(LA(S))  &kp LC(D)  &ctrl_shlft LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none  &none
 &none  &kp LC(Z)      &kp LC(X)      &kp LC(C)  &ctrl_shlft LC(LS(V)) LC(V)  &ctrl_shlft LA(LC(B)) LC(B)    &none       &none  &none  &none  &none  &none
-                                     &to 3      &to 2                        &to 1                          &to 1       &mo 4
+                                     &mo 3      &to 2                        &to 1                          &to 1       &mo 4
                                                 &none                        &none                          &mkp LCLK
             >;
 
