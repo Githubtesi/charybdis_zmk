@@ -14,7 +14,7 @@
 
         /* 根拠: 0,1,2の全レイヤーでマウス移動を許可する */
 
-        // layers = <0 1 2 3 4>;
+        layers = <0 1 2 3 4 5 6>; // <-- ここを修正
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
