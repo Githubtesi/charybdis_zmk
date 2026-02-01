@@ -74,33 +74,6 @@
             layers = <0 2 1>;
             slow-release;
         };
-
-        under_bar {
-            bindings = <&kp LS(INT1)>;
-            key-positions = <46 47>;
-            timeout-ms = <60>;
-            require-prior-idle-ms = <100>;
-            slow-release;
-            layers = <0 2 1>;
-        };
-
-        search_commamd {
-            bindings = <&kp LC(F)>;
-            key-positions = <28 37>;
-            timeout-ms = <60>;
-            require-prior-idle-ms = <100>;
-            slow-release;
-            layers = <0>;
-        };
-
-        to_zenkaku_ {
-            bindings = <&kp GRAVE>;
-            key-positions = <27 26>;
-            timeout-ms = <60>;
-            slow-release;
-            require-prior-idle-ms = <100>;
-            layers = <0 2 1>;
-        };
     };
 
     /* --- 特殊挙動定義 (エラー解消の根拠) --- */
@@ -143,15 +116,6 @@
 
     /* --- キーマップ --- */
 
-    macros {
-        under_bar: under_bar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(INT1) &kp LS(MINUS)>;
-            label = "UNDER_BAR";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -170,12 +134,12 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC       &none      &kp F2          &none      &none                    &none        &none      &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
-&kp TAB       &none      &none           &none      &none                    &none        &none      &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
-&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &none                    &none        &none      &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)  &none        &mkp MB4   &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
-                                         &mo 3      &to 2                    &none        &to 0      &mo 4
-                                                    &kp BACKSPACE            &kp ENTER    &mkp LCLK
+&kp ESC       &none      &kp F2          &none      &none                        &none        &none      &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
+&kp TAB       &none      &none           &none      &none                        &none        &none      &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
+&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &ctrl_shlft LC(LS(F)) LC(F)  &none        &none      &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)      &none        &mkp MB4   &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+                                         &mo 3      &to 2                        &none        &to 0      &mo 4
+                                                    &kp BACKSPACE                &kp ENTER    &mkp LCLK
             >;
         };
 
@@ -195,7 +159,7 @@
         other_base {
             bindings = <
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &to 6  &none
 &none  &to 5  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
                      &none  &to 2  &to 1    &to 0  &mo 4
@@ -228,6 +192,19 @@
             >;
 
             label = "エクセルコマンド";
+        };
+
+        pycharm_command {
+            bindings = <
+&none  &none          &none          &none      &none                        &none                          &kp LS(F6)  &none  &none  &none  &none  &ctrl_shlft LS(F11) F11
+&none  &none          &kp LC(W)      &kp LC(E)  &ctrl_shlft LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none  &none
+&none  &kp LS(LC(A))  &kp LC(LA(S))  &kp LC(D)  &ctrl_shlft LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none  &none
+&none  &kp LC(Z)      &kp LC(X)      &kp LC(C)  &ctrl_shlft LC(LS(V)) LC(V)  &ctrl_shlft LA(LC(B)) LC(B)    &none       &none  &none  &none  &none  &none
+                                     &to 3      &to 2                        &to 1                          &to 1       &mo 4
+                                                &none                        &none                          &mkp LCLK
+            >;
+
+            label = "pycharmコマンド";
         };
     };
 };
