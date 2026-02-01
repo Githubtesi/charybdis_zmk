@@ -183,12 +183,12 @@
 
         Excel {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &mo 3  &to 2  &to 1    &to 0  &mo 4
-                            &none  &none    &none
+&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
+                     &mo 3  &to 2  &to 1    &to 0      &mo 4
+                            &none  &none    &mkp LCLK
             >;
 
             label = "エクセルコマンド";
