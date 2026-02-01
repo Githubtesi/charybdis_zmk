@@ -196,12 +196,12 @@
 
         pycharm_command {
             bindings = <
-&none  &none          &none          &none      &none                        &none                          &kp LS(F6)  &none  &none  &none  &none  &ctrl_shlft LS(F11) F11
-&none  &none          &kp LC(W)      &kp LC(E)  &ctrl_shlft LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none  &none
-&none  &kp LS(LC(A))  &kp LC(LA(S))  &kp LC(D)  &ctrl_shlft LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none  &none
-&none  &kp LC(Z)      &kp LC(X)      &kp LC(C)  &ctrl_shlft LC(LS(V)) LC(V)  &ctrl_shlft LA(LC(B)) LC(B)    &none       &none  &none  &none  &none  &none
-                                     &mo 3      &to 2                        &to 1                          &to 0       &mo 4
-                                                &none                        &none                          &mkp LCLK
+&kp ESC  &none          &none          &none      &none                        &none                          &kp LS(F6)  &none  &none  &none  &none  &ctrl_shlft LS(F11) F11
+&none    &none          &kp LC(W)      &kp LC(E)  &ctrl_shlft LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none  &none
+&none    &kp LS(LC(A))  &kp LC(LA(S))  &kp LC(D)  &ctrl_shlft LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none  &none
+&none    &kp LC(Z)      &kp LC(X)      &kp LC(C)  &ctrl_shlft LC(LS(V)) LC(V)  &ctrl_shlft LA(LC(B)) LC(B)    &none       &none  &none  &none  &none  &none
+                                       &mo 3      &to 2                        &to 1                          &to 0       &mo 4
+                                                  &none                        &none                          &mkp LCLK
             >;
 
             label = "pycharmコマンド";
