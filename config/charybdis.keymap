@@ -121,10 +121,10 @@
 
         norman {
             bindings = <
-&kp ESC    &kp N1               &kp NUMBER_2              &kp N3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp N7  &kp N8                &kp N9                        &kp N0                       &auto_shift LEFT_BRACE LEFT_BRACKET
-&kp TAB    &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J         &kp U   &kp R                 &kp L                         &auto_shift COLON SEMICOLON  &auto_shift RIGHT_BRACE RIGHT_BRACKET
-&kp LALT   &auto_shift RCTRL A  &auto_shift LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y         &kp N   &kp I                 &auto_shift RIGHT_SHIFT O     &auto_shift LCTRL H          &auto_shift SQT DOUBLE_QUOTES
-&kp MINUS  &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P         &kp M   &auto_shift LT COMMA  &auto_shift GREATER_THAN DOT  &auto_shift QUESTION SLASH   &auto_shift PLUS EQUAL
+&kp ESC    &kp N1               &kp NUMBER_2              &kp N3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp N7  &kp N8     &kp N9                     &kp N0               &kp LEFT_BRACKET
+&kp TAB    &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J         &kp U   &kp R      &kp L                      &none                &kp RIGHT_BRACKET
+&kp LALT   &auto_shift RCTRL A  &auto_shift LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y         &kp N   &kp I      &auto_shift RIGHT_SHIFT O  &auto_shift LCTRL H  &none
+&kp MINUS  &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P         &kp M   &kp COMMA  &kp PERIOD                 &kp SLASH            &none
                                                           &mo 4   &to 3          &to 2        &to 1         &mo 7
                                                                   &kp BACKSPACE  &kp SPACE    &to 0
             >;
