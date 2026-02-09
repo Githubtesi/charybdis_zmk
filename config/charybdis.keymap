@@ -71,7 +71,7 @@
             key-positions = <14 13>;
             timeout-ms = <60>;
             require-prior-idle-ms = <100>;
-            layers = <1 3 2>;
+            layers = <1 3 2 0>;
             slow-release;
         };
     };
@@ -79,9 +79,9 @@
     /* --- 特殊挙動定義 (エラー解消の根拠) --- */
 
     behaviors {
-        ctrl_shlft: ctrl_shlft {
+        auto_shift: auto_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_SHLFT";
+            label = "AUTO_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <280>;
@@ -121,12 +121,12 @@
 
         norman {
             bindings = <
-&kp ESC   &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5       &kp N6  &kp N7  &kp N8     &kp N9                     &kp N0               &kp LBKT
-&kp TAB   &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J   &kp U   &kp R      &kp L                      &kp SEMI             &ctrl_shlft RBKT BSLH
-&kp LALT  &ctrl_shlft RCTRL A  &ctrl_shlft LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y   &kp N   &kp I      &ctrl_shlft RIGHT_SHIFT O  &ctrl_shlft LCTRL H  &kp RIGHT_ALT
-&none     &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P   &kp M   &kp COMMA  &kp DOT                    &kp FSLH             &none
-                                                         &mo 4   &to 3          &to 2        &to 1   &mo 7
-                                                                 &kp BACKSPACE  &kp SPACE    &to 0
+&kp ESC                       &auto_shift EXCLAMATION N1  &auto_shift AT_SIGN N2    &auto_shift POUND N3  &auto_shift DOLLAR N4  &auto_shift PERCENT N5      &auto_shift CARET N6  &auto_shift AMPERSAND N7  &auto_shift ASTRK N8  &auto_shift LEFT_PARENTHESIS N9  &auto_shift RIGHT_PARENTHESIS N0  &auto_shift LEFT_BRACE LEFT_BRACKET
+&kp TAB                       &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                       &kp J                 &kp U                     &kp R                 &kp L                            &auto_shift COLON SEMICOLON       &auto_shift RIGHT_BRACE RIGHT_BRACKET
+&kp LALT                      &auto_shift RCTRL A         &auto_shift LEFT_SHIFT S  &kp E                 &kp T                  &auto_shift UNDERSCORE G    &kp Y                 &kp N                     &kp I                 &auto_shift RIGHT_SHIFT O        &auto_shift LCTRL H               &auto_shift SQT DOUBLE_QUOTES
+&auto_shift MINUS UNDERSCORE  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                       &kp P                 &kp M                     &auto_shift LT COMMA  &auto_shift GREATER_THAN DOT     &auto_shift QUESTION SLASH        &auto_shift PLUS EQUAL
+                                                                                    &mo 4                 &to 3                  &to 2                       &to 1                 &mo 7
+                                                                                                          &kp BACKSPACE          &kp SPACE                   &to 0
             >;
 
             label = "英語配列";
@@ -136,8 +136,8 @@
             label = "大西配列";
             bindings = <
 &kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                        &kp N6  &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
-&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                       &kp F   &kp W   &kp R   &kp Y                      &kp P                &kp BSLH
-&kp LEFT_ALT  &ctrl_shlft LCTRL E  &ctrl_shlft LEFT_SHIFT I  &kp A   &kp O          &ctrl_shlft LS(INT1) MINUS    &kp K   &kp T   &kp N   &ctrl_shlft RIGHT_SHIFT S  &ctrl_shlft RCTRL H  &kp RIGHT_ALT
+&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                       &kp F   &kp W   &kp R   &kp Y                      &kp P                &kp RBKT
+&kp LEFT_ALT  &auto_shift LCTRL E  &auto_shift LEFT_SHIFT I  &kp A   &kp O          &auto_shift LS(INT1) MINUS    &kp K   &kp T   &kp N   &auto_shift RIGHT_SHIFT S  &auto_shift RCTRL H  &kp RIGHT_ALT
 &none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI                      &kp G   &kp D   &kp M   &kp J                      &kp B                &none
                                                              &mo 4   &to 3          &to 2                         &to 1   &mo 7
                                                                      &kp BACKSPACE  &kp SPACE                     &to 0
@@ -149,8 +149,8 @@
             bindings = <
 &kp ESC       &none      &kp F2          &none      &none                        &none        &none     &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
 &kp TAB       &none      &none           &none      &none                        &none        &none     &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
-&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &ctrl_shlft LC(LS(F)) LC(F)  &none        &none     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &ctrl_shlft LG(V) RC(V)      &none        &mkp MB4  &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &auto_shift LG(V) RC(V)      &none        &mkp MB4  &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
                                          &mo 4      &to 3                        &none        &to 1     &mo 7
                                                     &kp BACKSPACE                &kp ENTER    &to 0
             >;
@@ -159,9 +159,9 @@
         number {
             bindings = <
 &kp ESC  &none                                   &none                               &none                                           &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &ctrl_shlft QUESTION EXCLAMATION        &kp LS(N2)                   &kp LS(N7)                                &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &ctrl_shlft RBKT BSLH  &ctrl_shlft LS(RBKT) LS(BSLH)  &ctrl_shlft LS(N8) LS(N9)  &ctrl_shlft LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &kp HASH                                &kp DOLLAR                          &kp PERCENT                                     &kp LS(INT3)                            &kp BSLH     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+&none    &auto_shift QUESTION EXCLAMATION        &kp DOUBLE_QUOTES                   &kp SINGLE_QUOTE                                &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &auto_shift LEFT_BRACKET RIGHT_BRACKET  &auto_shift LEFT_BRACE RIGHT_BRACE  &auto_shift LEFT_PARENTHESIS RIGHT_PARENTHESIS  &auto_shift LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &kp HASH                                &kp DOLLAR                          &kp PERCENT                                     &kp PIPE                            &kp RBKT     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                                                                                      &mo 4                                           &none                               &to 2        &to 1            &mo 7
                                                                                                                                      &kp BACKSPACE                       &kp SPACE    &to 0
             >;
@@ -184,12 +184,12 @@
 
         Excel {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none      &none  &none  &none  &none  &none
-                     &mo 4  &to 3  &to 2    &to 1      &mo 7
-                            &none  &none    &mkp LCLK
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &mo 4  &to 3  &to 2    &to 1  &mo 7
+                            &none  &none    &to 0
             >;
 
             label = "エクセルコマンド";
@@ -197,12 +197,12 @@
 
         pycharm_command {
             bindings = <
-&none  &none                        &none                             &none      &none                        &none                          &kp LS(F6)  &none  &none  &none  &none          &ctrl_shlft LS(F11) F11
-&none  &none                        &kp LC(W)                         &kp LC(E)  &ctrl_shlft LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none          &none
-&none  &ctrl_shlft LCTRL LS(LC(A))  &ctrl_shlft LEFT_SHIFT LA(LC(S))  &kp LC(D)  &ctrl_shlft LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none          &none
-&none  &kp LC(Z)                    &kp LC(X)                         &kp LC(C)  &ctrl_shlft LC(LS(V)) LC(V)  &ctrl_shlft LA(LC(B)) LC(B)    &none       &none  &none  &none  &kp LC(SLASH)  &none
+&none  &none                        &none                             &none      &none                        &none                          &kp LS(F6)  &none  &none  &none  &none          &auto_shift LS(F11) F11
+&none  &none                        &kp LC(W)                         &kp LC(E)  &auto_shift LC(LS(R)) LC(R)  &none                          &none       &none  &none  &none  &none          &none
+&none  &auto_shift LCTRL LS(LC(A))  &auto_shift LEFT_SHIFT LA(LC(S))  &kp LC(D)  &auto_shift LS(LC(F)) LC(F)  &none                          &none       &none  &none  &none  &none          &none
+&none  &kp LC(Z)                    &kp LC(X)                         &kp LC(C)  &auto_shift LC(LS(V)) LC(V)  &auto_shift LA(LC(B)) LC(B)    &none       &none  &none  &none  &kp LC(SLASH)  &none
                                                                       &mo 4      &to 3                        &to 2                          &to 1       &mo 7
-                                                                                 &none                        &none                          &mkp LCLK
+                                                                                 &none                        &none                          &to 0
             >;
 
             label = "pycharmコマンド";
@@ -213,8 +213,8 @@
             bindings = <
 &none         &none      &none           &none      &none                        &none        &none  &none           &none           &none            &none    &none
 &kp TAB       &none      &none           &none      &none                        &none        &none  &kp PAGE_DOWN   &kp UP          &kp PAGE_UP      &kp DEL  &none
-&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &ctrl_shlft LC(LS(F)) LC(F)  &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
-&none         &kp LC(Z)  &kp LC(X)       &kp LC(C)  &ctrl_shlft LG(V) LC(V)      &none        &none  &mkp LCLK       &none           &none            &none    &none
+&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
+&none         &kp LC(Z)  &kp LC(X)       &kp LC(C)  &auto_shift LG(V) LC(V)      &none        &none  &mkp LCLK       &mkp MCLK       &mkp RCLK        &none    &none
                                          &none      &none                        &none        &none  &none
                                                     &kp BACKSPACE                &kp ENTER    &none
             >;
