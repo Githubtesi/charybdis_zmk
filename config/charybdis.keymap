@@ -135,12 +135,12 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                        &kp N6  &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
-&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                       &kp F   &kp W   &kp R   &kp Y                      &kp P                &kp BSLH
-&kp LEFT_ALT  &auto_shift LCTRL E  &auto_shift LEFT_SHIFT I  &kp A   &kp O          &auto_shift LS(INT1) MINUS    &kp K   &kp T   &kp N   &auto_shift RIGHT_SHIFT S  &auto_shift RCTRL H  &kp RIGHT_ALT
-&none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI                      &kp G   &kp D   &kp M   &kp J                      &kp B                &none
-                                                             &mo 4   &to 3          &to 2                         &to 1   &mo 7
-                                                                     &kp BACKSPACE  &kp SPACE                     &to 0
+&kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5          &kp N6  &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
+&kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT         &kp F   &kp W   &kp R   &kp Y                      &kp P                &kp BSLH
+&kp LEFT_ALT  &auto_shift LCTRL E  &auto_shift LEFT_SHIFT I  &kp A   &kp O          &kp LS(INT1)    &kp K   &kp T   &kp N   &auto_shift RIGHT_SHIFT S  &auto_shift RCTRL H  &kp RIGHT_ALT
+&none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI        &kp G   &kp D   &kp M   &kp J                      &kp B                &none
+                                                             &mo 4   &to 3          &to 2           &to 1   &mo 7
+                                                                     &kp BACKSPACE  &kp SPACE       &to 0
             >;
         };
 
