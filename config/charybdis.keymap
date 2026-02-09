@@ -121,10 +121,10 @@
 
         norman {
             bindings = <
-&kp ESC                     &auto_shift EXCLAMATION_MARK N1  &auto_shift LBKT N2    &auto_shift POUND N3  &auto_shift DOLLAR N4  &auto_shift PERCENT N5    &auto_shift EQUAL N6  &auto_shift LS(N6) N7  &auto_shift LS(QUOTE) N8  &auto_shift LS(N8) N9  &auto_shift LS(N9) N0  &auto_shift LS(RBKT) RBKT
-&kp TAB                     &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                 &kp L                            &auto_shift QUOTE SEMICOLON       &auto_shift LS(INTERNATIONAL_3) INTERNATIONAL_3
+&kp ESC                     &auto_shift EXCLAMATION N1  &auto_shift LBKT N2    &auto_shift POUND N3  &auto_shift DOLLAR N4  &auto_shift PERCENT N5    &auto_shift EQUAL N6  &auto_shift LS(N6) N7  &auto_shift LS(QUOTE) N8  &auto_shift LS(N8) N9  &auto_shift LS(N9) N0  &auto_shift LS(RBKT) RBKT
+&kp TAB                     &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                 &kp L                            &auto_shift QUOTE SEMICOLON       &auto_shift LS(BSLH) BSLH
 &kp LALT                    &auto_shift RCTRL A         &auto_shift LEFT_SHIFT S  &kp E                 &kp T                  &auto_shift LS(INT1) G    &kp Y                 &kp N                     &kp I                 &auto_shift RIGHT_SHIFT O        &auto_shift LCTRL H               &auto_shift LS(N7) LS(N2)
-&auto_shift MINUS LS(INT1)  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LESS_THAN COMMA  &auto_shift GREATER_THAN DOT     &auto_shift QUESTION_MARK SLASH        &auto_shift LS(SEMICOLON) LS(MINUS)
+&auto_shift MINUS LS(INT1)  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA  &auto_shift GREATER_THAN DOT     &auto_shift QUESTION SLASH        &auto_shift LS(SEMICOLON) LS(MINUS)
                                                                                   &mo 4                 &to 3                  &to 2                     &to 1                 &mo 7
                                                                                                         &kp BACKSPACE          &kp SPACE                 &to 0
             >;
@@ -159,8 +159,8 @@
         number {
             bindings = <
 &kp ESC  &none                             &none                          &none                      &none                               &none        &kp GRAVE        &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &auto_shift QUESTION_MARK EXCLAMATION_MARK  &kp LBKT                     &kp LS(N6)                 &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &auto_shift INTERNATIONAL_3 BSLH             &auto_shift LS(INTERNATIONAL_3) LS(BSLH)  &auto_shift LS(QUOTE) LS(N8)  &auto_shift LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &auto_shift QUESTION EXCLAMATION  &kp LBKT                     &kp LS(N6)                 &none                               &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &auto_shift BSLH BSLH             &auto_shift LS(BSLH) LS(BSLH)  &auto_shift LS(QUOTE) LS(N8)  &auto_shift LESS_THAN GREATER_THAN  &none        &kp LS(MINUS)    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
 &none    &kp HASH                          &kp DOLLAR                     &kp PERCENT                &kp LS(INT3)                        &kp BSLH     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                                                                           &mo 4                      &none                               &to 2        &to 1            &mo 7
                                                                                                      &kp BACKSPACE                       &kp SPACE    &to 0
