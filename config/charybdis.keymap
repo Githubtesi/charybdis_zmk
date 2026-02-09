@@ -121,12 +121,12 @@
 
         norman {
             bindings = <
-&kp ESC    &auto_shift EXCLAMATION N1  &auto_shift AT_SIGN N2    &auto_shift POUND N3  &auto_shift DOLLAR N4  &auto_shift PERCENT N5    &auto_shift CARET N6  &auto_shift AMPERSAND N7  &auto_shift ASTRK N8  &auto_shift LEFT_PARENTHESIS N9  &auto_shift RIGHT_PARENTHESIS N0  &auto_shift LEFT_BRACE LEFT_BRACKET
-&kp TAB    &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                 &kp L                            &auto_shift COLON SEMICOLON       &auto_shift RIGHT_BRACE RIGHT_BRACKET
-&kp LALT   &auto_shift RCTRL A         &auto_shift LEFT_SHIFT S  &kp E                 &kp T                  &kp G                     &kp Y                 &kp N                     &kp I                 &auto_shift RIGHT_SHIFT O        &auto_shift LCTRL H               &auto_shift SQT DOUBLE_QUOTES
-&kp MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA  &auto_shift GREATER_THAN DOT     &auto_shift QUESTION SLASH        &auto_shift PLUS EQUAL
-                                                                 &mo 4                 &to 3                  &to 2                     &to 1                 &mo 7
-                                                                                       &kp BACKSPACE          &kp SPACE                 &to 0
+&kp ESC    &kp N1               &kp NUMBER_2              &kp N3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp N7  &kp N8                &kp N9                        &kp N0                       &auto_shift LEFT_BRACE LEFT_BRACKET
+&kp TAB    &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J         &kp U   &kp R                 &kp L                         &auto_shift COLON SEMICOLON  &auto_shift RIGHT_BRACE RIGHT_BRACKET
+&kp LALT   &auto_shift RCTRL A  &auto_shift LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y         &kp N   &kp I                 &auto_shift RIGHT_SHIFT O     &auto_shift LCTRL H          &auto_shift SQT DOUBLE_QUOTES
+&kp MINUS  &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P         &kp M   &auto_shift LT COMMA  &auto_shift GREATER_THAN DOT  &auto_shift QUESTION SLASH   &auto_shift PLUS EQUAL
+                                                          &mo 4   &to 3          &to 2        &to 1         &mo 7
+                                                                  &kp BACKSPACE  &kp SPACE    &to 0
             >;
 
             label = "英語配列";
