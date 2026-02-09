@@ -121,11 +121,11 @@
 
         norman {
             bindings = <
-&kp ESC    &kp N1               &kp NUMBER_2              &kp N3  &kp NUMBER_4   &kp N5       &kp NUMBER_6  &kp N7  &kp N8     &kp N9                     &kp N0               &kp LEFT_BRACKET
-&kp TAB    &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J         &kp U   &kp R      &kp L                      &none                &kp RIGHT_BRACKET
-&kp LALT   &auto_shift RCTRL A  &auto_shift LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y         &kp N   &kp I      &auto_shift RIGHT_SHIFT O  &auto_shift LCTRL H  &none
-&kp MINUS  &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P         &kp M   &kp COMMA  &kp PERIOD                 &kp SLASH            &none
-                                                          &mo 4   &to 3          &to 2        &to 1         &mo 7
+&kp ESC    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5       &kp N6  &kp N7  &kp N8     &kp N9                     &kp N0               &kp LEFT_BRACKET
+&kp TAB    &kp Q                &kp W                     &kp D   &kp F          &kp K        &kp J   &kp U   &kp R      &kp L                      &none                &kp RIGHT_BRACKET
+&kp LALT   &auto_shift RCTRL A  &auto_shift LEFT_SHIFT S  &kp E   &kp T          &kp G        &kp Y   &kp N   &kp I      &auto_shift RIGHT_SHIFT O  &auto_shift LCTRL H  &none
+&kp MINUS  &kp Z                &kp X                     &kp C   &kp V          &kp B        &kp P   &kp M   &kp COMMA  &kp PERIOD                 &kp SLASH            &none
+                                                          &mo 4   &to 3          &to 2        &to 1   &mo 7
                                                                   &kp BACKSPACE  &kp SPACE    &to 0
             >;
 
@@ -147,12 +147,12 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC       &none      &kp F2          &none      &none                        &none        &none     &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
-&kp TAB       &none      &none           &none      &none                        &none        &none     &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
-&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
-&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &auto_shift LG(V) RC(V)      &none        &mkp MB4  &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
-                                         &mo 4      &to 3                        &none        &to 1     &mo 7
-                                                    &kp BACKSPACE                &kp ENTER    &to 0
+&kp ESC       &none      &kp F2          &none      &none                    &none        &none     &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
+&kp TAB       &none      &none           &none      &none                    &none        &none     &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
+&kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &kp LC(F)                &none        &none     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &auto_shift LG(V) RC(V)  &none        &mkp MB4  &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
+                                         &mo 4      &to 3                    &none        &to 1     &mo 7
+                                                    &kp BACKSPACE            &kp ENTER    &to 0
             >;
         };
 
