@@ -137,7 +137,7 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESCAPE    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                        &kp N6  &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
+&kp ESC    &kp N1               &kp N2                    &kp N3  &kp N4         &kp N5                        &kp N6  &kp N7  &kp N8  &kp N9                     &kp N0               &kp SLASH
 &kp TAB       &kp Q                &kp L                     &kp U   &kp COMMA      &kp DOT                       &kp F   &kp W   &kp R   &kp Y                      &kp P                &kp BSLH
 &kp LALT  &auto_shift LCTRL E  &auto_shift LSHFT I  &kp A   &kp O          &auto_shift LS(INT1) MINUS    &kp K   &kp T   &kp N   &auto_shift RSHFT S  &auto_shift RCTRL H  &kp RALT
 &none         &kp Z                &kp X                     &kp C   &kp V          &kp SEMI                      &kp G   &kp D   &kp M   &kp J                      &kp B                &none
@@ -150,11 +150,11 @@
             label = "マウス移動";
             bindings = <
 &kp ESC       &none      &kp F2          &none      &none                        &none        &none     &kp RC(KP_MINUS)  &none           &kp RC(KP_PLUS)  &none       &none
-&kp TAB       &none      &none           &none      &none                        &none        &none     &kp PAGE_DOWN     &kp UP_ARROW    &kp PAGE_UP      &kp DELETE  &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT_ARROW  &none       &none
+&kp TAB       &none      &none           &none      &none                        &none        &none     &kp PAGE_DOWN     &kp UP    &kp PAGE_UP      &kp DEL  &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none     &kp LEFT          &kp DOWN  &kp RIGHT  &none       &none
 &none         &kp LC(Z)  &kp RC(X)       &kp LC(C)  &auto_shift LG(V) RC(V)      &none        &mkp MB4  &mkp LCLK         &mkp MCLK       &mkp RCLK        &mkp MB5    &none
                                          &mo 4      &to 3                        &none        &to 1     &mo 7
-                                                    &kp BSPC                &kp ENTER    &to 0
+                                                    &kp BSPC                &kp RET    &to 0
             >;
         };
 
@@ -215,10 +215,10 @@
             bindings = <
 &none         &none      &none           &none      &none                        &none        &none  &none           &none           &none            &none    &none
 &kp TAB       &none      &none           &none      &none                        &none        &none  &kp PAGE_DOWN   &kp UP          &kp PAGE_UP      &kp DEL  &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &auto_shift LC(LS(F)) LC(F)  &none        &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
 &none         &kp LC(Z)  &kp LC(X)       &kp LC(C)  &auto_shift LG(V) LC(V)      &none        &none  &mkp LCLK       &none           &none            &none    &none
                                          &none      &none                        &none        &none  &none
-                                                    &kp BSPC                &kp ENTER    &none
+                                                    &kp BSPC                &kp RET    &none
             >;
         };
     };
