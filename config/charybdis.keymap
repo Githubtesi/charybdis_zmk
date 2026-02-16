@@ -130,9 +130,9 @@
         norman {
             bindings = <
 &kp ESC                  &auto_shift EXCL N1  &auto_shift LBKT N2    &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5    &auto_shift EQUAL N6  &auto_shift LS(N6) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(N8) N9  &auto_shift LS(N9) N0  &auto_shift LS(RBKT) RBKT
-&kp TAB                  &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                       &kp L                            &auto_shift QUOTE SEMI       &auto_shift LS(BSLH) BSLH
+&kp TAB                  &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                       &kp L                            &auto_shift SQT SEMI       &auto_shift LS(BSLH) BSLH
 &kp LALT                 &auto_shift RCTRL A         &auto_shift LSHFT S  &kp E                 &kp T                  &auto_shift LS(INT1) G       &kp Y                 &kp N                     &kp I                       &auto_shift RSHFT O        &auto_shift LCTRL H               &auto_shift LS(N2) LS(N7)
-&auto_shift LS(INT1) MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT     &auto_shift QUES SLASH        &auto_shift LS(SEMI) LS(MINUS)
+&auto_shift LS(INT1) MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT     &auto_shift LS(SLASH) SLASH        &auto_shift LS(SEMI) LS(MINUS)
                                                                                &mo 4                 &to 3                  &to 2                     &to 1                 &mo 7
                                                                                                      &kp BSPC          &kp SPACE                 &to 0
             >;
