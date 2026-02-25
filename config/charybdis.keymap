@@ -130,10 +130,10 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC                       &auto_shift EXCLAMATION N1  &auto_shift AT_SIGN N2  &auto_shift POUND N3  &auto_shift DOLLAR N4        &auto_shift PERCENT N5          &auto_shift CARET N6           &auto_shift AMPERSAND N7  &auto_shift KP_MULTIPLY N8  &auto_shift LEFT_PARENTHESIS N9  &auto_shift RIGHT_PARENTHESIS N0  &auto_shift LEFT_BRACE LEFT_BRACKET
-&kp TAB                       &kp Q                       &kp L                   &kp U                 &auto_shift LESS_THAN COMMA  &auto_shift GREATER_THAN DOT    &auto_shift SQT DOUBLE_QUOTES  &kp W                     &kp R                       &kp Y                            &kp P                             &auto_shift RIGHT_BRACE RBKT
-&kp LALT                      &auto_shift LCTRL E         &auto_shift LSHFT I     &kp A                 &kp O                        &kp F                           &kp K                          &kp T                     &kp N                       &auto_shift RSHFT S              &auto_shift RCTRL H               &auto_shift COLON SEMICOLON
-&auto_shift UNDERSCORE MINUS  &kp Z                       &kp X                   &kp C                 &kp V                        &auto_shift PLUS EQUAL          &kp G                          &kp D                     &kp M                       &kp J                            &kp B                             &auto_shift QUESTION SLASH
+&kp ESC                       &auto_shift EXCL N1  &auto_shift LBKT N2  &auto_shift HASH N3  &auto_shift DLLR N4        &auto_shift PRCNT N5          &auto_shift EQUAL N6           &auto_shift LS(N6) N7  &auto_shift KP_MULTIPLY N8  &auto_shift LS(N8) N9  &auto_shift LS(N9) N0  &auto_shift LS(RBKT) RBKT
+&kp TAB                       &kp Q                       &kp L                   &kp U                 &auto_shift LT COMMA  &auto_shift GT DOT    &auto_shift LS(N7) LS(N2)  &kp W                     &kp R                       &kp Y                            &kp P                             &auto_shift LS(BSLH) BSLH
+&kp LALT                      &auto_shift LCTRL E         &auto_shift LSHFT I     &kp A                 &kp O                        &kp F                           &kp K                          &kp T                     &kp N                       &auto_shift RSHFT S              &auto_shift RCTRL H               &auto_shift SQT SEMICOLON
+&auto_shift LS(INT1) MINUS  &kp Z                       &kp X                   &kp C                 &kp V                        &auto_shift LS(SEMI) LS(MINUS)          &kp G                          &kp D                     &kp M                       &kp J                            &kp B                             &auto_shift QUESTION SLASH
                                                                                   &mo 3                 &to 2                        &to 1                           &to 0                          &mo 6
                                                                                                         &kp BSPC                     &kp SPACE                       &none
             >;
@@ -155,7 +155,7 @@
             bindings = <
 &kp ESC  &none  &none  &none  &none     &none        &none            &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
 &none    &none  &none  &none  &none     &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &none  &none  &none  &none     &none        &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &none  &none  &none  &none     &none        &kp LS(MINUS)        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
 &none    &none  &none  &none  &none     &none        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                        &mo 3  &none     &to 1        &to 0            &mo 6
                               &kp BSPC  &kp SPACE    &none
@@ -197,7 +197,7 @@
 &none                    &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &none  &none                        &none
 &none                    &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none  &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
                                                            &mo 3                        &to 2                        &to 1                          &to 0       &mo 6
-                                                                                        &kp LC(SPACE)                &kp LA(ENTER)                  &none
+                                                                                        &kp LC(SPACE)                &kp LA(RET)                  &none
             >;
 
             label = "pycharmコマンド";
@@ -218,8 +218,8 @@
         qwerty {
             bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT
-&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp RBKT
+&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMICOLON  &kp APOS
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                            &trans  &trans  &trans    &trans  &trans
                                    &trans  &trans    &trans
@@ -230,12 +230,12 @@
 
         not_use_norman {
             bindings = <
-&kp ESC                  &auto_shift EXCLAMATION N1  &auto_shift AT_SIGN N2    &auto_shift POUND N3  &auto_shift DOLLAR N4  &auto_shift PERCENT N5    &auto_shift CARET N6  &auto_shift AMPERSAND N7  &auto_shift KP_ASTERISK N8  &auto_shift LEFT_PARENTHESIS N9  &auto_shift RIGHT_PARENTHESIS N0  &auto_shift LEFT_BRACE LEFT_BRACKET
-&kp TAB                  &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                       &kp L                            &auto_shift COLON SEMICOLON       &auto_shift RIGHT_BRACE RIGHT_BRACKET
-&kp LALT                 &auto_shift RCTRL A         &auto_shift LEFT_SHIFT S  &kp E                 &kp T                  &auto_shift UNDER G       &kp Y                 &kp N                     &kp I                       &auto_shift RIGHT_SHIFT O        &auto_shift LCTRL H               &auto_shift DOUBLE_QUOTES SQT
-&auto_shift UNDER MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA        &auto_shift GREATER_THAN DOT     &auto_shift QUESTION SLASH        &auto_shift PLUS EQUAL
+&kp ESC                  &auto_shift EXCL N1  &auto_shift LBKT N2    &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5    &auto_shift EQUAL N6  &auto_shift LS(N6) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(N8) N9  &auto_shift LS(N9) N0  &auto_shift LS(RBKT) RBKT
+&kp TAB                  &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                       &kp L                            &auto_shift SQT SEMICOLON       &auto_shift LS(BSLH) BSLH
+&kp LALT                 &auto_shift RCTRL A         &auto_shift LSHFT S  &kp E                 &kp T                  &auto_shift LS(INT1) G       &kp Y                 &kp N                     &kp I                       &auto_shift RSHFT O        &auto_shift LCTRL H               &auto_shift LS(N2) LS(N7)
+&auto_shift LS(INT1) MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT     &auto_shift QUESTION SLASH        &auto_shift LS(SEMI) LS(MINUS)
                                                                                &mo 4                 &to 2                  &to 1                     &to 0                 &mo 6
-                                                                                                     &kp BACKSPACE          &kp SPACE                 &none
+                                                                                                     &kp BSPC          &kp SPACE                 &none
             >;
 
             label = "現在未使用_英語配列";
