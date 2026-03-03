@@ -78,9 +78,9 @@
         };
 
         voice_input {
-            bindings = <&kp RC(RS(SPACE))>;
+            bindings = <&kp LG(H)>;
             key-positions = <36 37>;
-            layers = <3 1 0 2 6>;
+            layers = <3 1 0 2 6 5>;
         };
     };
 
@@ -124,6 +124,22 @@
 
     /* --- キーマップ --- */
 
+    macros {
+        e_oca: e_adjust {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp O &kp C &kp A>;
+            label = "E_ADJUST";
+        };
+
+        e_hba: e_hba {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp B &kp A>;
+            label = "E_HBA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -134,8 +150,8 @@
 &kp TAB                       &kp Q                       &kp L                   &kp U                 &auto_shift LESS_THAN COMMA  &auto_shift GREATER_THAN DOT    &auto_shift SQT DOUBLE_QUOTES  &kp W                     &kp R                       &kp Y                            &kp P                             &auto_shift RIGHT_BRACE RBKT
 &kp LALT                      &auto_shift LCTRL E         &auto_shift LSHFT I     &kp A                 &kp O                        &kp F                           &kp K                          &kp T                     &kp N                       &auto_shift RSHFT S              &auto_shift RCTRL H               &auto_shift COLON SEMICOLON
 &auto_shift UNDERSCORE MINUS  &kp Z                       &kp X                   &kp C                 &kp V                        &auto_shift PLUS EQUAL          &kp G                          &kp D                     &kp M                       &kp J                            &kp B                             &auto_shift QUESTION SLASH
-                                                                                  &mo 3                 &to 2                        &to 1                           &to 0                          &mo 6
-                                                                                                        &kp BSPC                     &kp SPACE                       &none
+                                                                                  &mo 3                 &to 2                        &to 1                           &none                          &mo 6
+                                                                                                        &kp BSPC                     &kp SPACE                       &kp F13
             >;
         };
 
@@ -147,7 +163,7 @@
 &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none     &kp LEFT          &kp DOWN   &kp RIGHT        &none     &none
 &none     &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
                                 &mo 3      &to 2                    &none                          &to 0     &mo 6
-                                           &kp BSPC                 &kp RET                        &none
+                                           &kp BSPC                 &kp RET                        &kp F14
             >;
         };
 
@@ -158,7 +174,7 @@
 &none    &none  &none  &none  &none     &none        &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
 &none    &none  &none  &none  &none     &none        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                        &mo 3  &none     &to 1        &to 0            &mo 6
-                              &kp BSPC  &kp SPACE    &none
+                              &kp BSPC  &kp SPACE    &kp F15
             >;
 
             label = "テンキー";
@@ -179,12 +195,12 @@
 
         Excel {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &mo 3  &to 2  &to 1    &to 0  &mo 6
-                            &none  &none    &none
+&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(LEFT_BRACKET)
+&none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
+&none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
+&none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
+                                 &mo 3       &to 2   &to 1     &to 0    &mo 6
+                                             &none   &none     &kp F16
             >;
 
             label = "エクセルコマンド";
@@ -192,12 +208,12 @@
 
         pycharm_command {
             bindings = <
-&kp ESC                  &none      &auto_shift LS(F2) F2  &none                        &none                        &none                          &kp LS(F6)  &none      &none                        &none  &none                        &auto_shift LS(F11) F11
-&auto_shift LS(TAB) TAB  &kp LC(Q)  &none                  &none                        &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none  &none                        &none
-&none                    &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &none  &none                        &none
-&none                    &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none  &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
+&kp ESC                  &none      &auto_shift LS(F2) F2  &none                        &none                        &none                          &kp LS(F6)  &none      &none                        &none          &kp LS(LC(F10))              &auto_shift LS(F11) F11
+&auto_shift LS(TAB) TAB  &kp LC(Q)  &none                  &none                        &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
+&none                    &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
+&none                    &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none          &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
                                                            &mo 3                        &to 2                        &to 1                          &to 0       &mo 6
-                                                                                        &kp LC(SPACE)                &kp LA(ENTER)                  &none
+                                                                                        &kp LC(SPACE)                &kp LA(ENTER)                  &kp F17
             >;
 
             label = "pycharmコマンド";
