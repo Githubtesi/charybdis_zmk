@@ -172,9 +172,9 @@
         number {
             bindings = <
 &kp ESC  &none  &none           &none    &none     &none        &none            &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &none  &none           &kp TAB  &none     &none        &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &none  &kp LEFT_SHIFT  &none    &none     &none        &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &none  &none           &none    &none     &none        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+&none    &none  &none           &kp TAB  &none     &none        &kp UNDERSCORE   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &none  &kp LEFT_SHIFT  &none    &none     &none        &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &none  &none           &none    &none     &kp EQUAL    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
                                 &mo 3    &none     &to 1        &to 0            &mo 6
                                          &kp BSPC  &kp SPACE    &kp F15
             >;
@@ -225,7 +225,7 @@
             label = "文字入力確定";
             bindings = <
 &kp ESCAPE  &none      &kp F2     &none      &none                    &none                          &none  &none          &kp F8    &none        &kp F10  &none
-&kp TAB     &none      &none      &kp TAB    &none                    &none                          &none  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&none       &none      &none      &kp TAB    &none                    &none                          &none  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
 &kp LALT    &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none  &kp LEFT       &kp DOWN  &kp RIGHT    &none    &none
 &none       &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none  &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
                                   &none      &none                    &none                          &none  &none
