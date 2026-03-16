@@ -148,7 +148,7 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift LEFT_BRACKET RIGHT_BRACKET
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift RIGHT_BRACKET LEFT_BRACKET
 &kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp AT_SIGN
 &kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp COLON
 &kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
@@ -224,7 +224,7 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&kp ESCAPE  &none      &kp F2     &none      &none                    &none                          &none  &none          &none     &none        &none    &none
+&kp ESCAPE  &none      &kp F2     &none      &none                    &none                          &none  &none          &kp F8    &none        &kp F10  &none
 &kp TAB     &none      &none      &kp TAB    &none                    &none                          &none  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
 &kp LALT    &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none  &kp LEFT       &kp DOWN  &kp RIGHT    &none    &none
 &none       &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none  &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
