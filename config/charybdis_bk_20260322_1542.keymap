@@ -228,9 +228,9 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift BSLH BSLH
-&kp LS(MINUS)             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp RBKT
-&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp LS(N7)
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift BSLH RBKT
+&kp EQUAL             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp LBKT
+&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp SQT
 &kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
                                                   &Mo_3         &To_2         &To_1         &kp LSHFT  &Mo_6
                                                                 &kp BSPC      &kp SPACE     &kp F13
@@ -277,7 +277,7 @@
 
         Excel {
             bindings = <
-&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(BSLH)
+&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(RBKT)
 &none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
 &none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
 &none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
@@ -328,9 +328,9 @@
 
         not_use_norman {
             bindings = <
-&kp ESC                     &auto_shift EXCL N1  &auto_shift BSLH N2  &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5      &auto_shift LS(MINUS) N6  &auto_shift LS(MINUS) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(LS(N6)) N9  &auto_shift LS(LS(N7)) N0         &auto_shift LS(BSLH) BSLH
-&kp TAB                     &kp Q                &kp W                &kp D                &kp F                &kp K                     &kp J                     &kp U                 &kp R                       &kp L                   &auto_shift EQUAL SEMICOLON  &auto_shift LS(BSLH) BSLH
-&kp LALT                    &auto_shift RCTRL A  &auto_shift LSHFT S  &kp E                &kp T                &auto_shift LS(INT1) G    &kp Y                     &kp N                 &kp I                       &auto_shift RSHFT O     &auto_shift LCTRL H           &auto_shift BSLH LS(MINUS)
+&kp ESC                     &auto_shift EXCL N1  &auto_shift BSLH N2  &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5      &auto_shift LS(MINUS) N6  &auto_shift LS(MINUS) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(LS(N7)) N9  &auto_shift LS(SQT) N0         &auto_shift LS(BSLH) BSLH
+&kp TAB                     &kp Q                &kp W                &kp D                &kp F                &kp K                     &kp J                     &kp U                 &kp R                       &kp L                   &auto_shift LS(N6) SEMICOLON  &auto_shift LS(BSLH) BSLH
+&kp LALT                    &auto_shift RCTRL A  &auto_shift LSHFT S  &kp E                &kp T                &auto_shift LS(INT1) G    &kp Y                     &kp N                 &kp I                       &auto_shift RSHFT O     &auto_shift LCTRL H           &auto_shift RBKT EQUAL
 &auto_shift LS(INT1) MINUS  &kp Z                &kp X                &kp C                &kp V                &kp B                     &kp P                     &kp M                 &auto_shift LT COMMA        &auto_shift GT DOT      &auto_shift QUESTION SLASH    &auto_shift LS(SEMICOLON) LS(MINUS)
                                                                       &mo 4                &to 2                &to 1                     &to 0                     &mo 6
                                                                                            &kp BSPC             &kp SPACE                 &none
