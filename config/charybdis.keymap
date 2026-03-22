@@ -147,6 +147,7 @@
             bindings =
                 <&macro_tap>,
                 <&to 0>,
+                <&macro_wait_time 50>,
                 <&macro_press>,
                 <&kp F13>,
                 <&macro_wait_time 1000>,
