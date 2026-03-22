@@ -241,7 +241,7 @@
 &none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
 &none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
 &none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
-                                 &Mo_3       &To_2   &To_1     &To_0    &mo 6
+                                 &Mo_3       &To_2   &To_1     &To_0    &Mo_6
                                              &none   &none     &kp F17
             >;
 
@@ -254,7 +254,7 @@
 &none              &kp LC(Q)  &none                  &kp TAB                      &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
 &kp LA(BACKSLASH)  &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
 &none              &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none          &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
-                                                     &Mo_3                        &To_2                        &To_1                          &To_0       &mo 6
+                                                     &Mo_3                        &To_2                        &To_1                          &To_0       &Mo_6
                                                                                   &kp LC(SPACE)                &kp LA(RET)                    &kp F18
             >;
 
