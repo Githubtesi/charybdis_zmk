@@ -150,11 +150,75 @@
                 <&macro_wait_time 50>,
                 <&macro_press>,
                 <&kp F13>,
-                <&macro_wait_time 1000>,
+                <&macro_wait_time 4000>,
                 <&macro_release>,
                 <&kp F13>;
 
             label = "TO_0";
+        };
+
+        To_1: To_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 1>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&kp F14>,
+                <&macro_wait_time 4000>,
+                <&macro_release>,
+                <&kp F14>;
+
+            label = "TO_1";
+        };
+
+        To_2: To_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&to 2>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&kp F15>,
+                <&macro_wait_time 4000>,
+                <&macro_release>,
+                <&kp F15>;
+
+            label = "TO_2";
+        };
+
+        Mo_3: To_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&mo 3>,
+                <&macro_wait_time 50>,
+                <&macro_press>,
+                <&kp F16>,
+                <&macro_wait_time 4000>,
+                <&macro_release>,
+                <&kp F16>;
+
+            label = "TO_3";
+        };
+
+        Mo_6: Mo_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&mo 6>,
+                <&macro_tap_time 50>,
+                <&macro_press>,
+                <&kp F23>,
+                <&macro_wait_time 4000>,
+                <&macro_release>,
+                <&kp F23>;
+
+            label = "MO_6";
         };
     };
 
@@ -164,11 +228,11 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift BSLH BSLH
-&kp LS(MINUS)             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp RBKT
-&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp LS(N7)
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift RIGHT_BRACKET LEFT_BRACKET
+&kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp AT_SIGN
+&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp COLON
 &kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
-                                                  &mo 3         &to 2         &to 1         &kp LSHFT  &mo 6
+                                                  &Mo_3         &To_2         &To_1         &kp LEFT_SHIFT  &Mo_6
                                                                 &kp BSPC      &kp SPACE     &kp F13
             >;
         };
@@ -180,7 +244,7 @@
 &none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
 &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none     &kp LEFT          &kp DOWN   &kp RIGHT        &none     &none
 &none     &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
-                                &mo 3      &to 2                    &none                          &To_0     &mo 6
+                                &Mo_3      &To_2                    &none                          &To_0     &Mo_6
                                            &kp BSPC                 &kp RET                        &kp F14
             >;
         };
@@ -188,10 +252,10 @@
         number {
             bindings = <
 &kp ESC  &none  &none           &none    &none     &none        &none            &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &none  &none           &kp TAB  &none     &none        &kp LS(INT1)   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &none  &kp LSHFT  &none    &none     &none        &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &none  &none           &none    &none     &kp LS(MINUS)    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                                &mo 3    &none     &to 1        &To_0            &mo 6
+&none    &none  &none           &kp TAB  &none     &none        &kp UNDERSCORE   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &none  &kp LEFT_SHIFT  &none    &none     &none        &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &none  &none           &none    &none     &kp EQUAL    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                                &Mo_3    &none     &To_1        &To_0            &Mo_6
                                          &kp BSPC  &kp SPACE    &kp F15
             >;
 
@@ -213,11 +277,11 @@
 
         Excel {
             bindings = <
-&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(BSLH)
+&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(LEFT_BRACKET)
 &none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
 &none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
 &none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
-                                 &mo 3       &to 2   &to 1     &To_0    &mo 6
+                                 &Mo_3       &To_2   &To_1     &To_0    &Mo_6
                                              &none   &none     &kp F16
             >;
 
@@ -230,8 +294,8 @@
 &none              &kp LC(Q)  &none                  &kp TAB                      &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
 &kp LA(BACKSLASH)  &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
 &none              &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none          &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
-                                                     &mo 3                        &to 2                        &to 1                          &To_0       &mo 6
-                                                                                  &kp LC(SPACE)                &kp LA(RET)                  &kp F17
+                                                     &Mo_3                        &To_2                        &To_1                          &To_0       &Mo_6
+                                                                                  &kp LC(SPACE)                &kp LA(ENTER)                  &kp F17
             >;
 
             label = "pycharmコマンド";
@@ -240,21 +304,21 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&kp ESC  &none      &kp F2     &none      &none                    &none                          &none  &none          &kp F8    &none        &kp F10  &none
-&none       &none      &none      &kp TAB    &none                    &none                          &none  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
-&kp LALT    &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none  &kp LEFT       &kp DOWN  &kp RIGHT    &none    &none
-&none       &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none  &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
-                                  &none      &none                    &none                          &none  &none
-                                             &kp BSPC                 &kp RET                        &none
+&kp ESC   &none      &kp F2     &none      &none                    &none                          &none  &none          &kp F8    &none        &kp F10  &none
+&none     &none      &none      &kp TAB    &none                    &none                          &none  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none  &kp LEFT       &kp DOWN  &kp RIGHT    &none    &none
+&none     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none  &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
+                                &none      &none                    &none                          &none  &none
+                                           &kp BSPC                 &kp RET                        &none
             >;
         };
 
         qwerty {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P          &kp BSLH
 &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMICOLON  &kp APOS
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
                            &trans  &trans  &trans    &trans  &trans
                                    &trans  &trans    &trans
             >;
@@ -264,12 +328,12 @@
 
         not_use_norman {
             bindings = <
-&kp ESC                  &auto_shift EXCL N1  &auto_shift RBKT N2    &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5    &auto_shift LS(MINUS) N6  &auto_shift EQUAL N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(SQT) N9  &auto_shift LS(N8) N0  &auto_shift LS(BSLH) BSLH
-&kp TAB                  &kp Q                       &kp W                     &kp D                 &kp F                  &kp K                     &kp J                 &kp U                     &kp R                       &kp L                            &auto_shift LS(N7) SEMICOLON       &auto_shift LS(BSLH) BSLH
-&kp LALT                 &auto_shift RCTRL A         &auto_shift LSHFT S  &kp E                 &kp T                  &auto_shift LS(INT1) G       &kp Y                 &kp N                     &kp I                       &auto_shift RSHFT O        &auto_shift LCTRL H               &auto_shift LBKT LS(N6)
-&auto_shift LS(INT1) MINUS  &kp Z                       &kp X                     &kp C                 &kp V                  &kp B                     &kp P                 &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT     &auto_shift QUESTION SLASH        &auto_shift LS(SEMICOLON) LS(MINUS)
-                                                                               &mo 4                 &to 2                  &to 1                     &to 0                 &mo 6
-                                                                                                     &kp BSPC          &kp SPACE                 &none
+&kp ESC                     &auto_shift EXCL N1  &auto_shift RBKT N2  &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5      &auto_shift LS(MINUS) N6  &auto_shift EQUAL N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(SQT) N9  &auto_shift LS(N8) N0         &auto_shift LS(BSLH) BSLH
+&kp TAB                     &kp Q                &kp W                &kp D                &kp F                &kp K                     &kp J                     &kp U                 &kp R                       &kp L                   &auto_shift LS(N7) SEMICOLON  &auto_shift LS(BSLH) BSLH
+&kp LALT                    &auto_shift RCTRL A  &auto_shift LSHFT S  &kp E                &kp T                &auto_shift LS(INT1) G    &kp Y                     &kp N                 &kp I                       &auto_shift RSHFT O     &auto_shift LCTRL H           &auto_shift LBKT LS(N6)
+&auto_shift LS(INT1) MINUS  &kp Z                &kp X                &kp C                &kp V                &kp B                     &kp P                     &kp M                 &auto_shift LT COMMA        &auto_shift GT DOT      &auto_shift QUESTION SLASH    &auto_shift LS(SEMICOLON) LS(MINUS)
+                                                                      &mo 4                &to 2                &to 1                     &to 0                     &mo 6
+                                                                                           &kp BSPC             &kp SPACE                 &none
             >;
 
             label = "現在未使用_英語配列";
