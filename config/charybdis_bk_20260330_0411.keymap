@@ -1,0 +1,346 @@
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+/ {
+    /* --- トラックボール入力設定 --- */
+
+    trackball_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        status = "okay";
+
+        /* 根拠: 0,1,2の全レイヤーでマウス移動を許可する */
+
+        layers = <0 1 2 3 4 5 6 7>; // <-- ここを修正
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+        scale-divisor = <4>;
+    };
+
+    /* --- レイヤー3専用：低速設定（DPI変更） --- */
+    /* ----------
+    trackball_snipe_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        status = "okay";
+
+        // 下記レイヤーの時だけこの設定を適用する
+
+        layers = <2 3>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+
+        // 根拠: 分母を大きくすると、マウスはより精密（低速）に動きます
+
+        scale-divisor = <16>; // 2から8に変えることで、通常より4倍遅くなります
+    };
+
+
+    trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <9>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        y-invert;
+        bindings = <&ib_wheel_scaler 1 14>;
+    };
+
+    --------- */
+
+    ib_wheel_scaler: ib_wheel_scaler {
+        compatible = "zmk,input-behavior-scaler";
+        #binding-cells = <2>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_WHEEL>;
+    };
+
+    /* --- コンボ設定 --- */
+
+    combos {
+        compatible = "zmk,combos";
+
+        zenkaku-hankaku-toggle {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 13>;
+            timeout-ms = <60>;
+            require-prior-idle-ms = <100>;
+            layers = <0 2 1 3>;
+            slow-release;
+        };
+
+        voice_input {
+            bindings = <&kp LC(LEFT_GUI)>;
+            key-positions = <36 37>;
+            layers = <3 1 0 2 6 5>;
+        };
+
+        left {
+            bindings = <&left_arrow>;
+            key-positions = <37 31>;
+            layers = <0>;
+        };
+
+        upper {
+            bindings = <&upper_arrow>;
+            key-positions = <37 20>;
+            layers = <0>;
+        };
+
+        under {
+            bindings = <&under_arrow>;
+            key-positions = <37 32>;
+            layers = <0>;
+        };
+
+        right {
+            bindings = <&right_arrow>;
+            key-positions = <37 33>;
+            layers = <0>;
+        };
+    };
+
+    /* --- 特殊挙動定義 (エラー解消の根拠) --- */
+
+    behaviors {
+        auto_shift: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 53 54 55>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 48 49 50 51 52 53 54 55>;
+        };
+    };
+
+    /* --- キーマップ --- */
+
+    macros {
+        e_oca: e_adjust {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp O &kp C &kp A>;
+            label = "E_ADJUST";
+            wait-ms = <50>;
+        };
+
+        e_hba: e_hba {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp H &kp B &kp A>;
+            label = "E_HBA";
+            wait-ms = <50>;
+        };
+
+        To_0: To_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&macro_wait_time 100>, <&kp F13>;
+
+            label = "TO_0";
+        };
+
+        To_1: To_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&macro_wait_time 100>, <&kp F14>;
+
+            label = "TO_1";
+        };
+
+        To_2: To_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 2>, <&macro_wait_time 100>, <&kp F15>;
+
+            label = "TO_2";
+        };
+
+        To_3: To_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3>, <&macro_wait_time 100>, <&kp F16>;
+
+            label = "TO_3";
+        };
+
+        left_arrow: left_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp H>;
+            label = "LEFT_ARROW";
+        };
+
+        under_arrow: under_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp J>;
+            label = "UNDER_ARROW";
+        };
+
+        upper_arrow: upper_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp K>;
+            label = "UPPER_ARROW";
+        };
+
+        right_arrow: right_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp L>;
+            label = "RIGHT_ARROW";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        onisi {
+            label = "大西配列";
+            bindings = <
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift AT_SIGN RBKT
+&kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp LBKT
+&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp COLON
+&kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
+                                                  &To_3         &To_2         &To_1         &kp LSHFT       &mo 6
+                                                                &kp BSPC      &kp SPACE     &kp F13
+            >;
+        };
+
+        mouse {
+            label = "マウス移動";
+            bindings = <
+&kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
+&none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
+&none     &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
+                                &To_3      &To_2                    &none                          &To_0     &mo 6
+                                           &kp BSPC                 &kp RET                        &kp F14
+            >;
+        };
+
+        number {
+            bindings = <
+&kp ESC  &none  &none      &none    &none     &none            &none            &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
+&none    &none  &none      &kp TAB  &none     &none            &kp LS(INT1)     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
+&none    &none  &kp LSHFT  &none    &none     &none            &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
+&none    &none  &none      &none    &none     &kp LS(MINUS)    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
+                           &To_3    &none     &To_1            &To_0            &mo 6
+                                    &kp BSPC  &kp SPACE        &kp F15
+            >;
+
+            label = "テンキー";
+        };
+
+        app_base {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &to 5  &none
+&none  &to 4  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
+                     &none  &To_2  &To_1    &To_0    &mo 6
+                            &none  &none    &kp F16
+            >;
+
+            label = "ベース(アプリ)";
+        };
+
+        Excel {
+            bindings = <
+&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(BSLH)
+&none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
+&none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
+&none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
+                                 &To_3       &To_2   &To_1     &To_0    &mo 6
+                                             &none   &none     &kp F17
+            >;
+
+            label = "エクセルコマンド";
+        };
+
+        pycharm {
+            bindings = <
+&kp ESC            &none      &auto_shift LS(F2) F2  &none                        &none                        &none                          &kp LS(F6)  &none      &none                        &none          &kp LS(LC(F10))              &auto_shift LS(F11) F11
+&none              &kp LC(Q)  &none                  &kp TAB                      &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
+&kp LA(BACKSLASH)  &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
+&none              &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none          &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
+                                                     &To_3                        &To_2                        &To_1                          &To_0       &mo 6
+                                                                                  &kp LC(SPACE)                &kp LA(RET)                    &kp F18
+            >;
+
+            label = "pycharmコマンド";
+        };
+
+        edit {
+            label = "文字入力確定";
+            bindings = <
+&kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &none          &kp F8    &none        &kp F10  &none
+&none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
+&none     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none     &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
+                                &none      &none                    &none                          &none     &none
+                                           &kp BSPC                 &kp RET                        &kp F23
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P          &kp BSLH
+&kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMICOLON  &kp APOS
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+                           &trans  &trans  &trans    &trans  &trans
+                                   &trans  &trans    &trans
+            >;
+
+            label = "テスト用_ダミー";
+        };
+
+        not_use_norman {
+            bindings = <
+&kp ESC                     &auto_shift EXCL N1  &auto_shift BSLH N2  &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5      &auto_shift LS(MINUS) N6  &auto_shift LS(MINUS) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(EQUAL) N9  &auto_shift LS(LS(N6)) N0        &auto_shift LS(BSLH) BSLH
+&kp TAB                     &kp Q                &kp W                &kp D                &kp F                &kp K                     &kp J                     &kp U                     &kp R                       &kp L                     &auto_shift LS(MINUS) SEMICOLON  &auto_shift LS(BSLH) BSLH
+&kp LALT                    &auto_shift RCTRL A  &auto_shift LSHFT S  &kp E                &kp T                &auto_shift LS(INT1) G    &kp Y                     &kp N                     &kp I                       &auto_shift RSHFT O       &auto_shift LCTRL H              &auto_shift BSLH LS(MINUS)
+&auto_shift LS(INT1) MINUS  &kp Z                &kp X                &kp C                &kp V                &kp B                     &kp P                     &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT        &auto_shift QUESTION SLASH       &auto_shift LS(SEMICOLON) LS(MINUS)
+                                                                      &mo 4                &to 2                &to 1                     &to 0                     &mo 6
+                                                                                           &kp BSPC             &kp SPACE                 &none
+            >;
+
+            label = "現在未使用_英語配列";
+        };
+    };
+};
