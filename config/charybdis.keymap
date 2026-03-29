@@ -78,9 +78,33 @@
         };
 
         voice_input {
-            bindings = <&kp LG(H)>;
+            bindings = <&kp LC(LEFT_GUI)>;
             key-positions = <36 37>;
             layers = <3 1 0 2 6 5>;
+        };
+
+        left {
+            bindings = <&left_arrow>;
+            key-positions = <37 31>;
+            layers = <0>;
+        };
+
+        upper {
+            bindings = <&upper_arrow>;
+            key-positions = <37 20>;
+            layers = <0>;
+        };
+
+        under {
+            bindings = <&under_arrow>;
+            key-positions = <37 32>;
+            layers = <0>;
+        };
+
+        right {
+            bindings = <&right_arrow>;
+            key-positions = <37 33>;
+            layers = <0>;
         };
     };
 
@@ -172,6 +196,34 @@
 
             label = "TO_3";
         };
+
+        left_arrow: left_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp H>;
+            label = "LEFT_ARROW";
+        };
+
+        under_arrow: under_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp J>;
+            label = "UNDER_ARROW";
+        };
+
+        upper_arrow: upper_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp K>;
+            label = "UPPER_ARROW";
+        };
+
+        right_arrow: right_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp L>;
+            label = "RIGHT_ARROW";
+        };
     };
 
     keymap {
@@ -180,11 +232,11 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift BSLH RBKT
-&kp EQUAL             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp LBKT
-&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K         &kp T         &kp N         &kp S         &kp H         &kp SQT
-&kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G         &kp D         &kp M         &kp J         &kp B         &kp SLASH
-                                                  &To_3         &To_2         &To_1         &kp LSHFT     &mo 6
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift BSLH RBKT
+&kp EQUAL             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp LBKT
+&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp SQT
+&kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
+                                                  &To_3         &To_2         &To_1         &kp LSHFT       &mo 6
                                                                 &kp BSPC      &kp SPACE     &kp F13
             >;
         };
@@ -194,7 +246,7 @@
             bindings = <
 &kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
 &none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none     &kp LEFT          &kp DOWN   &kp RIGHT        &none     &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
 &none     &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
                                 &To_3      &To_2                    &none                          &To_0     &mo 6
                                            &kp BSPC                 &kp RET                        &kp F14
@@ -256,11 +308,11 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&kp ESC   &none      &kp F2     &none      &none                    &none                          &none    &none          &kp F8    &none        &kp F10  &none
-&none     &none      &none      &kp TAB    &none                    &none                          &none    &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &none    &kp LEFT       &kp DOWN  &kp RIGHT    &none    &none
-&none     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none    &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
-                                &none      &none                    &none                          &none    &none
+&kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &none          &kp F8    &none        &kp F10  &none
+&none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
+&none     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none     &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
+                                &none      &none                    &none                          &none     &none
                                            &kp BSPC                 &kp RET                        &kp F23
             >;
         };
