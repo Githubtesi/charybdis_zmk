@@ -232,8 +232,8 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift AT_SIGN RBKT
-&kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp LBKT
+&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift AT_SIGN LEFT_BRACKET
+&kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp RIGHT_BRACKET
 &kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp COLON
 &kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
                                                   &To_3         &To_2         &To_1         &kp LSHFT       &mo 6
@@ -244,12 +244,12 @@
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
-&none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
-&none     &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
-                                &To_3      &To_2                    &none                          &To_0     &mo 6
-                                           &kp BSPC                 &kp RET                        &kp F14
+&kp ESC         &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
+&none           &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
+&kp LALT        &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
+&kp LEFT_SHIFT  &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
+                                      &To_3      &To_2                    &none                          &To_0     &mo 6
+                                                 &kp BSPC                 &kp RET                        &kp F14
             >;
         };
 
@@ -281,10 +281,10 @@
 
         Excel {
             bindings = <
-&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none  &kp LA(F8)  &none  &none   &kp LC(BSLH)
-&none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none  &none       &none  &none   &kp LA(F11)
-&none  &none      &none          &none       &e_oca  &none     &none    &none  &none       &none  &e_hba  &kp LC(SEMICOLON)
-&none  &none      &none          &none       &none   &none     &none    &none  &none       &none  &none   &none
+&none  &none      &kp F2         &kp LS(F3)  &kp F4  &kp F5    &none    &none      &kp LA(F8)  &none      &none   &kp LC(BSLH)
+&none  &kp LA(Q)  &kp LS(LC(L))  &none       &none   &none     &none    &none      &none       &none      &none   &kp LA(F11)
+&none  &none      &none          &none       &e_oca  &none     &none    &none      &none       &none      &e_hba  &kp LC(SEMICOLON)
+&none  &none      &none          &none       &none   &none     &none    &mkp LCLK  &mkp MCLK   &mkp RCLK  &none   &none
                                  &To_3       &To_2   &To_1     &To_0    &mo 6
                                              &none   &none     &kp F17
             >;
@@ -297,7 +297,7 @@
 &kp ESC            &none      &auto_shift LS(F2) F2  &none                        &none                        &none                          &kp LS(F6)  &none      &none                        &none          &kp LS(LC(F10))              &auto_shift LS(F11) F11
 &none              &kp LC(Q)  &none                  &kp TAB                      &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
 &kp LA(BACKSLASH)  &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
-&none              &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &kp LC(D)  &none                        &none          &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
+&kp LEFT_SHIFT     &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &mkp LCLK  &mkp MCLK                    &mkp RCLK      &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
                                                      &To_3                        &To_2                        &To_1                          &To_0       &mo 6
                                                                                   &kp LC(SPACE)                &kp LA(RET)                    &kp F18
             >;
@@ -308,12 +308,12 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&kp ESC   &none      &kp F2     &none      &none                    &none                          &none     &none          &kp F8    &none        &kp F10  &none
-&none     &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
-&kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
-&none     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none     &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
-                                &none      &none                    &none                          &none     &none
-                                           &kp BSPC                 &kp RET                        &kp F23
+&kp ESC         &none      &kp F2     &none      &none                    &none                          &none     &none          &kp F8    &none        &kp F10  &none
+&none           &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&kp LALT        &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
+&kp LEFT_SHIFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none     &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
+                                      &none      &none                    &none                          &none     &none
+                                                 &kp BSPC                 &kp RET                        &kp F23
             >;
         };
 
