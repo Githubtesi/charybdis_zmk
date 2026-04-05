@@ -80,7 +80,7 @@
         voice_input {
             bindings = <&kp LC(LEFT_GUI)>;
             key-positions = <36 37>;
-            layers = <3 1 0 2 6 5>;
+            layers = <0 2>;
         };
 
         left {
