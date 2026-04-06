@@ -80,7 +80,7 @@
         voice_input {
             bindings = <&kp LC(LEFT_GUI)>;
             key-positions = <36 37>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         left {
@@ -224,6 +224,22 @@
             bindings = <&kp Z &kp L>;
             label = "RIGHT_ARROW";
         };
+
+        To_4: To_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4>, <&macro_wait_time 100>, <&kp F17>;
+
+            label = "TO_4";
+        };
+
+        To_5: To_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 5>, <&macro_wait_time 100>, <&kp F18>;
+
+            label = "TO_5";
+        };
     };
 
     keymap {
@@ -269,8 +285,8 @@
         app_base {
             bindings = <
 &none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &to 5  &none
-&none  &to 4  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &To_5  &none
+&none  &To_4  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none    &none  &none  &none  &none  &none
                      &none  &To_2  &To_1    &To_0    &mo 6
                             &none  &none    &kp F16
