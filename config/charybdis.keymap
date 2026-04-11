@@ -252,7 +252,7 @@
 &kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp UNDERSCORE  &kp W         &kp R         &kp Y         &kp P         &kp RIGHT_BRACKET
 &kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp COLON
 &kp NON_US_BACKSLASH  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
-                                                  &To_3         &To_2         &To_1         &kp LSHFT       &mo 6
+                                                  &To_3         &To_2         &To_1         &kp LCTRL       &mo 6
                                                                 &kp BSPC      &kp SPACE     &kp F13
             >;
         };
