@@ -248,24 +248,24 @@
         onisi {
             label = "大西配列";
             bindings = <
-&kp ESC               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift LBKT RBKT
-&kp CARET             &kp Q         &kp L         &kp U         &kp COMMA     &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp BSLH
-&kp SEMICOLON         &kp E         &kp I         &kp A         &kp O         &kp F         &kp K           &kp T         &kp N         &kp S         &kp H         &kp SQT
-&kp INT3  &kp Z         &kp X         &kp C         &kp V         &kp MINUS     &kp G           &kp D         &kp M         &kp J         &kp B         &kp SLASH
-                                                  &To_3         &To_2         &To_1         &kp LCTRL       &mo 6
-                                                                &kp BSPC      &kp SPACE     &kp F13
+&kp ESC        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &auto_shift LBKT RBKT
+&kp EQUAL      &kp Q         &kp L         &kp U         &kp COMMA       &kp PERIOD    &kp LS(INT1)  &kp W         &kp R         &kp Y         &kp P         &kp BSLH
+&kp SEMICOLON  &kp E         &kp I         &kp A         &kp O           &kp F         &kp K         &kp T         &kp N         &kp S         &kp H         &kp SQT
+&kp INT3       &kp Z         &kp X         &kp C         &kp V           &kp MINUS     &kp G         &kp D         &kp M         &kp J         &kp B         &kp SLASH
+                                           &To_3         &To_2           &To_1         &kp LCTRL     &mo 6
+                                                         &kp LEFT_SHIFT  &kp SPACE     &kp F13
             >;
         };
 
         mouse {
             label = "マウス移動";
             bindings = <
-&kp ESC         &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
-&none           &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
-&kp LALT        &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
-&kp LSHFT  &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
-                                      &To_3      &To_2                    &none                          &To_0     &mo 6
-                                                 &kp BSPC                 &kp RET                        &kp F14
+&kp ESC    &none      &kp F2     &none      &none                    &none                          &none     &none          &none     &none        &none     &none
+&none      &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL   &none
+&kp LALT   &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END   &none
+&kp LSHFT  &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK      &mo 9     &mkp RCLK    &mkp MB5  &mkp MCLK
+                                 &To_3      &To_2                    &none                          &To_0     &mo 6
+                                            &kp BSPC                 &kp RET                        &kp F14
             >;
         };
 
@@ -313,7 +313,7 @@
 &kp ESC            &none      &auto_shift LS(F2) F2  &none                        &none                        &none                          &kp LS(F6)  &none      &none                        &none          &kp LS(LC(F10))              &auto_shift LS(F11) F11
 &none              &kp LC(Q)  &none                  &kp TAB                      &none                        &none                          &none       &kp LC(W)  &auto_shift LC(LS(R)) LC(R)  &none          &none                        &none
 &kp LA(BACKSLASH)  &kp LC(E)  &kp LSHFT              &auto_shift LC(LS(A)) LC(A)  &none                        &auto_shift LC(LS(F)) LC(F)    &none       &none      &none                        &kp LA(LC(S))  &none                        &none
-&kp LSHFT     &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &mkp LCLK  &mkp MCLK                    &mkp RCLK      &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
+&kp LSHFT          &kp LC(Z)  &kp LC(X)              &kp LC(C)                    &auto_shift LC(LS(V)) LC(V)  &none                          &none       &mkp LCLK  &mkp MCLK                    &mkp RCLK      &auto_shift LC(LA(B)) LC(B)  &kp LC(SLASH)
                                                      &To_3                        &To_2                        &To_1                          &To_0       &mo 6
                                                                                   &kp LC(SPACE)                &kp LA(RET)                    &kp F18
             >;
@@ -324,12 +324,12 @@
         edit {
             label = "文字入力確定";
             bindings = <
-&kp ESC         &none      &kp F2     &none      &none                    &none                          &none     &none          &kp F8    &none        &kp F10  &none
-&none           &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
-&kp LALT        &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
-&kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &none     &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
-                                      &none      &none                    &none                          &none     &none
-                                                 &kp BSPC                 &kp RET                        &kp F23
+&kp ESC    &none      &kp F2     &none      &none                    &none                          &none      &none          &kp F8    &none        &kp F10  &none
+&none      &none      &none      &kp TAB    &none                    &none                          &none      &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL  &none
+&kp LALT   &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME   &kp LEFT       &kp DOWN  &kp RIGHT    &kp END  &none
+&kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &auto_shift LG(V) LC(V)  &none                          &kp GRAVE  &mkp LCLK      &kp TAB   &none        &none    &kp SLASH
+                                 &none      &none                    &none                          &none      &none
+                                            &kp BSPC                 &kp RET                        &kp F23
             >;
         };
 
@@ -346,17 +346,28 @@
             label = "テスト用_ダミー";
         };
 
-        not_use_norman {
+        layer_8 {
+            label = "マウス移動_マウススクロール";
             bindings = <
-&kp ESC                     &auto_shift EXCL N1  &auto_shift BSLH N2  &auto_shift HASH N3  &auto_shift DLLR N4  &auto_shift PRCNT N5      &auto_shift LS(MINUS) N6  &auto_shift LS(MINUS) N7  &auto_shift KP_ASTERISK N8  &auto_shift LS(LS(MINUS)) N9  &auto_shift LS(EQUAL) N0        &auto_shift LS(BSLH) BSLH
-&kp TAB                     &kp Q                &kp W                &kp D                &kp F                &kp K                     &kp J                     &kp U                     &kp R                       &kp L                     &auto_shift LS(MINUS) SEMICOLON  &auto_shift LS(BSLH) BSLH
-&kp LALT                    &auto_shift RCTRL A  &auto_shift LSHFT S  &kp E                &kp T                &auto_shift LS(INT1) G    &kp Y                     &kp N                     &kp I                       &auto_shift RSHFT O       &auto_shift LCTRL H              &auto_shift BSLH LS(MINUS)
-&auto_shift LS(INT1) MINUS  &kp Z                &kp X                &kp C                &kp V                &kp B                     &kp P                     &kp M                     &auto_shift LT COMMA        &auto_shift GT DOT        &auto_shift QUESTION SLASH       &auto_shift LS(SEMICOLON) LS(MINUS)
-                                                                      &mo 4                &to 2                &to 1                     &to 0                     &mo 6
-                                                                                           &kp BSPC             &kp SPACE                 &none
+&kp ESC    &none      &kp F2     &none      &none                    &none                          &none     &kp RC(KP_MINUS)  &none      &kp RC(KP_PLUS)  &none     &none
+&none      &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN     &kp UP     &kp PAGE_UP      &kp DEL   &none
+&kp LALT   &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT          &kp DOWN   &kp RIGHT        &kp END   &none
+&kp LSHFT  &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK         &mkp MCLK  &mkp RCLK        &mkp MB5  &none
+                                 &To_3      &To_2                    &none                          &To_0     &mo 6
+                                            &kp BSPC                 &kp RET                        &kp F14
             >;
+        };
 
-            label = "現在未使用_英語配列";
+        mouse_scroll {
+            label = "マウス移動_スクロール";
+            bindings = <
+&kp ESC    &none      &kp F2     &none      &none                    &none                          &none     &none          &none     &none        &none     &none
+&none      &none      &none      &kp TAB    &none                    &none                          &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp DEL   &none
+&kp LALT   &kp LCTRL  &kp LSHFT  &kp LC(A)  &none                    &auto_shift LS(LC(F)) LC(F)    &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END   &none
+&kp LSHFT  &kp LC(Z)  &kp RC(X)  &kp LC(C)  &auto_shift LG(V) RC(V)  &none                          &mkp MB4  &mkp LCLK      &none     &mkp RCLK    &mkp MB5  &mkp MCLK
+                                 &To_3      &To_2                    &none                          &To_0     &mo 6
+                                            &kp BSPC                 &kp RET                        &kp F14
+            >;
         };
     };
 };
