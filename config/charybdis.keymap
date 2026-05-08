@@ -14,7 +14,7 @@
 
         /* 根拠: 0,1,2の全レイヤーでマウス移動を許可する */
 
-        layers = <0 1 2 3 4 5 6 7>; // <-- ここを修正
+        layers = <0 1 2 3 4 5 6 7 8 9>; // <-- ここを修正
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -22,45 +22,34 @@
         scale-divisor = <4>;
     };
 
-    /* --- レイヤー3専用：低速設定（DPI変更） --- */
-    /* ----------
-    trackball_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        status = "okay";
-
-        // 下記レイヤーの時だけこの設定を適用する
-
-        layers = <2 3>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-
-        // 根拠: 分母を大きくすると、マウスはより精密（低速）に動きます
-
-        scale-divisor = <16>; // 2から8に変えることで、通常より4倍遅くなります
-    };
-
-
-    trackball_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <9>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
-        y-invert;
-        bindings = <&ib_wheel_scaler 1 14>;
-    };
-
-    --------- */
 
     ib_wheel_scaler: ib_wheel_scaler {
         compatible = "zmk,input-behavior-scaler";
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
+    };
+
+    trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        status = "okay";
+
+        /* Layer 9 = mouse_scroll */
+        layers = <9>;
+
+        evt-type = <INPUT_EV_REL>;
+
+        /* 横方向はいったん無視 */
+        x-input-code = <INPUT_REL_MISC>;
+
+        /* 縦方向のトラックボール移動をスクロールに変換 */
+        y-input-code = <INPUT_REL_WHEEL>;
+
+        y-invert;
+
+        /* 2つ目の数字を小さくすると速く、大きくすると遅くなる */
+        bindings = <&ib_wheel_scaler 1 14>;
     };
 
     /* --- コンボ設定 --- */
