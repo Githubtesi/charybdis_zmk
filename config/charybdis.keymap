@@ -49,7 +49,7 @@
         y-invert;
 
         /* 2つ目の数字を小さくすると速く、大きくすると遅くなる */
-        bindings = <&ib_wheel_scaler 1 28>;
+        bindings = <&ib_wheel_scaler 1 32>;
     };
 
     /* --- コンボ設定 --- */
