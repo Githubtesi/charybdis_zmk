@@ -22,7 +22,6 @@
         scale-divisor = <4>;
     };
 
-
     ib_wheel_scaler: ib_wheel_scaler {
         compatible = "zmk,input-behavior-scaler";
         #binding-cells = <2>;
@@ -36,19 +35,21 @@
         status = "okay";
 
         /* Layer 9 = mouse_scroll */
-        layers = <9>;
 
+        layers = <9>;
         evt-type = <INPUT_EV_REL>;
 
         /* 横方向はいったん無視 */
+
         x-input-code = <INPUT_REL_MISC>;
 
         /* 縦方向のトラックボール移動をスクロールに変換 */
-        y-input-code = <INPUT_REL_WHEEL>;
 
+        y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
 
         /* 2つ目の数字を小さくすると速く、大きくすると遅くなる */
+
         bindings = <&ib_wheel_scaler 1 32>;
     };
 
@@ -260,11 +261,11 @@
 
         number {
             bindings = <
-&kp ESC  &none  &none      &none    &none     &none            &none            &kp KP_PLUS      &kp KP_MINUS     &kp KP_ASTERISK  &kp KP_SLASH  &none
-&none    &none  &none      &kp TAB  &none     &none            &kp LS(INT1)     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none         &none
-&none    &none  &kp LSHFT  &none    &none     &none            &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none         &kp KP_ENTER
-&none    &none  &none      &none    &none     &kp LS(MINUS)    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &none
-                           &To_3    &none     &To_1            &To_0            &mo 6
+&kp ESC  &none  &none      &none    &none     &none            &none         &kp KP_PLUS   &kp KP_MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &none
+&none    &none  &none      &kp TAB  &none     &none            &kp LS(INT1)  &kp NUMBER_7  &kp N8        &kp N9           &none         &none
+&none    &none  &kp LSHFT  &none    &none     &none            &none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &none         &kp KP_ENTER
+&none    &none  &none      &none    &none     &kp LS(MINUS)    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT       &none
+                           &To_3    &none     &To_1            &To_0         &mo 6
                                     &kp BSPC  &kp SPACE        &kp F15
             >;
 
