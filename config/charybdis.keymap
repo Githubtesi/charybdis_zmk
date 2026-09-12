@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    /* --- トラックボール入力設定 --- */
+    /* --- トラックボール入力設定  --- */
 
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
